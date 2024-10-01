@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="310021A7-EA8B-EBC4-C983-BA70D331C12D" containerWithKeyObject="AFA89B71-60A9-EF5F-1658-C9F183DB86D7" localFKIndex="0A95D2E8-B39D-6148-9A0E-0428D4650983" name="c_op_agendamento_c_op_dentista_fk">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>32917AFD-CC92-EB79-9791-C08DAAEA98FF</importedID>
+<referredTableLongName>c_op_dentista</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>121ED6C3-B1E1-25EA-8B6A-8847FD869047</referredTableID>
+<keyObject>BDA17895-0A6E-709C-65F4-4BB2F1CC6FB0</keyObject>
+<referredKeyID>BDA17895-0A6E-709C-65F4-4BB2F1CC6FB0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_dentista</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AFA89B71-60A9-EF5F-1658-C9F183DB86D7" name="c_op_agendamento">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>43FE0BF0-29A1-AF29-5FEE-322B55C1D83A</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_agendamento" id="262F1B1E-770D-DCFF-514C-68AD6CB411E7">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>BC8CAABF-443F-10CB-57DC-D85736CCC4A4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>375CEB70-8F5D-4C31-CC51-CB845AE3BD27</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_agendada" id="F6A73B04-33FF-DEF6-AA94-2950D3D22074">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>0EFBFDBD-2AE4-C91C-83ED-8B608E1E2A9F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2B76A4AB-76DE-6FE1-F912-E1DC9FB8EE2F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="horario_agendado" id="85392889-C9B3-5CFD-FDB8-12459C888BF8">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>EE3D7EFD-3D0A-8017-B1CE-875E36526DEC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>2B76A4AB-76DE-6FE1-F912-E1DC9FB8EE2F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status_tratamento" id="54CCC870-CEB4-A80A-CE39-6AD0D849E891">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>460EC905-3631-4E56-444A-5328862983FF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FDDD026D-F6A4-6988-D6AA-A561023802F1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao_agendamento" id="A3D22978-5D28-8659-5F54-E9DC0BE5A6A3">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>CAFFE029-2B7D-085C-B31F-54608098EB5B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>44518670-A503-111C-0C6F-E7B461ABBEFF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_dentista" id="C60C290C-D747-412E-40C4-525197D472A8">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>C6495B5A-1722-E09C-9FD5-E03B8982423C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>375CEB70-8F5D-4C31-CC51-CB845AE3BD27</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="310021A7-EA8B-EBC4-C983-BA70D331C12D" referredColumn="571CA897-02CB-D494-ACD7-9579244428AB"/>
+</associations>
+</Column>
+<Column name="id_usuario" id="B9958740-32CA-47FC-5BC0-71BC9B4876D2">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>AACEF981-51D9-D570-4129-FEFE774C97D4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>375CEB70-8F5D-4C31-CC51-CB845AE3BD27</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="648F8857-F4AE-3A9C-74FB-85A39E2803B1" referredColumn="D55A1C2A-BC3A-3D23-C8FD-E364429832B1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="10323BDE-7EE9-19E9-319C-819F100D7578" name="c_op_agendamento_pk">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>7F913665-62ED-763C-6742-548228486B52</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="262F1B1E-770D-DCFF-514C-68AD6CB411E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A95D2E8-B39D-6148-9A0E-0428D4650983" name="c_op_agendamento_c_op_dentista_fk">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C60C290C-D747-412E-40C4-525197D472A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F059B690-071A-D279-7F68-466734748CAF" name="c_op_agendamento_c_op_usuario_fk">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9958740-32CA-47FC-5BC0-71BC9B4876D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

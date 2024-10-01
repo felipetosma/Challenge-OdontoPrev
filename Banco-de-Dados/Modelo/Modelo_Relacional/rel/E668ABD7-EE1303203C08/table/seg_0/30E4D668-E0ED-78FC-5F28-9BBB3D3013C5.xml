@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="30E4D668-E0ED-78FC-5F28-9BBB3D3013C5" name="c_op_checklist">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>0B725111-554E-1FBB-D644-AC22FB1DF0C7</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_checklist" id="635A8D79-572E-0BDF-7989-52AAA402DA21">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>38C907C7-3EE6-B792-5698-F82E56AF10C3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>375CEB70-8F5D-4C31-CC51-CB845AE3BD27</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nivel" id="45DCC7F8-06DB-D3CA-BBD0-872862632214">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>0C5307BF-AFAD-D6DB-3CD6-83B7E0574E02</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B9049DAD-64DF-0477-BC04-65334BA43970</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="escovacao_dentes" id="36DA7073-5E80-DFBB-2C03-B42B3754F010">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>1CB8665C-6CF1-3018-0DD3-9FFBEA288F52</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B9049DAD-64DF-0477-BC04-65334BA43970</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fio_dental" id="306CDEB9-8C27-2142-68B7-3C8A37A073A4">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>447C710A-F10F-818D-7B68-A091F0AF97BC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B9049DAD-64DF-0477-BC04-65334BA43970</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="enxaguante_bucal" id="5B714477-6946-B5A8-EC6F-707DE2F36823">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>034F79A4-2426-94A3-D104-60C201936A9E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B9049DAD-64DF-0477-BC04-65334BA43970</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_usuario" id="7970E674-08B4-4EEB-A448-9877B815F1A4">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>6BFDA728-A421-79EC-3BA1-FC398906F669</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>375CEB70-8F5D-4C31-CC51-CB845AE3BD27</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F0CDC76-BFB7-9633-0E52-5A4F5D065153" referredColumn="D55A1C2A-BC3A-3D23-C8FD-E364429832B1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A272E275-81DF-3537-9DC1-106CEBCC2BF9" name="c_op_checklist_pk">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>1D26DDBC-5F0D-3661-3CB7-FA719EBE2913</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="635A8D79-572E-0BDF-7989-52AAA402DA21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF07E483-1F67-BF57-6467-11E966A7D68A" name="c_op_checklist__idx">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>9B49FC7F-A9E4-0608-704D-26EC7CDCB025</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7970E674-08B4-4EEB-A448-9877B815F1A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5C5E439C-AA87-152A-CCE7-CBCF85B077F9" name="c_op_checklist_c_op_usuario_fk">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7970E674-08B4-4EEB-A448-9877B815F1A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

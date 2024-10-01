@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="c_op_dentista" directorySegmentName="seg_0" id="121ED6C3-B1E1-25EA-8B6A-8847FD869047">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nome_dentista" id="0F16C1E0-E7A0-6608-4EC6-3D525336B450">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="cro" id="438EAE59-E5FC-C409-0FC9-18D1DFAA2E10">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_dentista" id="571CA897-02CB-D494-ACD7-9579244428AB">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="senha_dentista" id="732303B1-BFBB-AA43-015B-21288E6B5EEE">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="especialidade" id="C1138E6D-9123-FA8C-B82F-062881CAAE1E">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="c_op_dentista_pk" id="BDA17895-0A6E-709C-65F4-4BB2F1CC6FB0">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="c_op_dentista__UN" id="35F59455-1F95-297B-6A41-3B6FD4AC07FB">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:45:28 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

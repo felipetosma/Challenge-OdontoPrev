@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F0A12F8E-E047-B6F0-0AA5-D7C04B2C843E" name="c_op_dentista_planosaude">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>AA28DA1A-1B07-8F22-B56E-7E52C70A26B3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_plano" id="C55CFCA2-3794-7774-B1F0-D3E3D95930C7">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>898F8FA0-8FEA-BC9F-8545-102799E9292E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>375CEB70-8F5D-4C31-CC51-CB845AE3BD27</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1C41B004-B529-D18A-64FA-FB6D88EC3AEA" referredColumn="949CEA57-70FC-F23B-0765-DE3BA29098B4"/>
+</associations>
+</Column>
+<Column name="id_dentista" id="9D8EF2AB-146A-9021-8FD8-9E532918E135">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>C5463517-4585-8DDD-2A82-C0237DDFE4C0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>375CEB70-8F5D-4C31-CC51-CB845AE3BD27</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="18C075C0-D52F-4C2A-122E-82E3F6BEF195" referredColumn="571CA897-02CB-D494-ACD7-9579244428AB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D27500BA-6A8E-ADBB-B188-36452D255F07" name="c_op_dentista_planosaude_pk">
+<sourceDDLFile>codigoSQL-Tabelas.ddl</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<importedID>67517D9B-E7B9-4EBC-96F4-3227AC8E2C00</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C55CFCA2-3794-7774-B1F0-D3E3D95930C7"/>
+<colUsage columnID="9D8EF2AB-146A-9021-8FD8-9E532918E135"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="471238DE-F638-4CEC-223D-C1A3D027B7E8" name="relation_12_c_op_dentista_fk">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D8EF2AB-146A-9021-8FD8-9E532918E135"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2FD79337-0754-0FAF-A8B1-C708D90F543D" name="relation_12_c_op_plano_de_saude_fk">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-01 01:43:54 UTC</createdTime>
+<ownerDesignName>Modelo_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C55CFCA2-3794-7774-B1F0-D3E3D95930C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
