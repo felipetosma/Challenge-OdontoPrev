@@ -2,71 +2,108 @@
 -- Este bloco exibe a quantidade de tratamentos realizados por cada dentista, agrupando e ordenando pelos dentistas.
 
 DECLARE
+    v_nome_dentista   VARCHAR2(100);
+    v_qtd_tratamentos NUMBER;
 BEGIN
-    DBMS_OUTPUT.PUT_LINE('Dentistas e a quantidade de tratamentos realizados:');
-    FOR i IN (
-        SELECT d.nome_dentista, COUNT(t.id_tratamento) AS qtd_tratamentos
-        FROM c_op_dentista d
+    -- Seleciona o primeiro dentista com base na ordenação por tratamentos (primeiro da lista)
+    SELECT
+        d.nome_dentista,
+        COUNT(t.id_tratamento) AS qtd_tratamentos
+    INTO
+        v_nome_dentista,
+        v_qtd_tratamentos
+    FROM
+             c_op_dentista d
         INNER JOIN c_op_tratamento t ON d.id_dentista = t.id_dentista
-        GROUP BY d.nome_dentista
-        ORDER BY qtd_tratamentos DESC
-    )
-    LOOP
-        DBMS_OUTPUT.PUT_LINE('Dentista: ' || i.nome_dentista || ' - Tratamentos: ' || i.qtd_tratamentos);
-    END LOOP;
+    GROUP BY
+        d.nome_dentista
+    ORDER BY
+        COUNT(t.id_tratamento) DESC;
+
+    -- Exibe o resultado
+    dbms_output.put_line('Dentista: '
+                         || v_nome_dentista
+                         || ' - Tratamentos: '
+                         || v_qtd_tratamentos);
 END;
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
--- Este bloco exibe todos os usuários (pacientes) com seus dentistas associados. Caso o usuário ainda não tenha um dentista atribuído, 
+-- Esse bloco exibe os tratamentos realizados por cada dentista. O resultado é obtido diretamente.
+DECLARE
+    v_nome_dentista     VARCHAR2(100);
+    v_tipo_tratamento   VARCHAR2(200);
+    v_total_tratamentos NUMBER;
+BEGIN
+    SELECT
+        d.nome_dentista,
+        t.tipo_tratamento,
+        COUNT(t.id_tratamento)
+    INTO
+        v_nome_dentista,
+        v_tipo_tratamento,
+        v_total_tratamentos
+    FROM
+             c_op_dentista d
+        INNER JOIN c_op_tratamento t ON d.id_dentista = t.id_dentista
+    GROUP BY
+        d.nome_dentista,
+        t.tipo_tratamento
+    ORDER BY
+        d.nome_dentista,
+        t.tipo_tratamento;
+
+    dbms_output.put_line('Dentista: '
+                         || v_nome_dentista
+                         || ' | Tratamento: '
+                         || v_tipo_tratamento
+                         || ' | Total de Tratamentos: '
+                         || v_total_tratamentos);
+
+END;
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Exibe todos os usuários (pacientes) com seus dentistas associados. Caso o usuário ainda não tenha um dentista atribuído, 
 -- o nome do dentista será NULL.
 
-DECLARE
-BEGIN
-    DBMS_OUTPUT.PUT_LINE('Lista de Usuários e seus Dentistas:');
+DECLARE BEGIN
+    dbms_output.put_line('Lista de Usuários e seus Dentistas:');
     FOR i IN (
-        SELECT u.nome_usuario, d.nome_dentista
-        FROM c_op_usuario u
-        LEFT JOIN c_op_dentista d ON u.id_dentista = d.id_dentista
-        GROUP BY u.nome_usuario, d.nome_dentista
-        ORDER BY u.nome_usuario ASC
-    )
-    LOOP
-        DBMS_OUTPUT.PUT_LINE('Usuário: ' || i.nome_usuario || ' - Dentista: ' || i.nome_dentista);
+        SELECT
+            u.nome_usuario,
+            d.nome_dentista
+        FROM
+            c_op_usuario  u
+            LEFT JOIN c_op_dentista d ON u.id_dentista = d.id_dentista
+        GROUP BY
+            u.nome_usuario,
+            d.nome_dentista
+        ORDER BY
+            u.nome_usuario ASC
+    ) LOOP
+-- Verifica se o nome do dentista é NULL
+        IF i.nome_dentista IS NULL THEN
+            dbms_output.put_line('Usuário: '
+                                 || i.nome_usuario
+                                 || ' - Dentista: Sem Dentista Atribuído');
+        ELSE
+            dbms_output.put_line('Usuário: '
+                                 || i.nome_usuario
+                                 || ' - Dentista: '
+                                 || i.nome_dentista);
+        END IF;
     END LOOP;
-END;
-/
 
+END;
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
--- Este bloco exibe a quantidade de agendamentos por plano de saúde. Mesmo planos sem agendamentos serão exibidos.
-
-DECLARE
-BEGIN
-    DBMS_OUTPUT.PUT_LINE('Agendamentos por Plano de Saúde:');
-    FOR i IN (
-        SELECT p.nome_plano, COUNT(a.id_agendamento) AS qtd_agendamentos
-        FROM c_op_plano_de_saude p
-        RIGHT JOIN c_op_usuario u ON p.id_plano = u.id_plano
-        LEFT JOIN c_op_agendamento a ON u.id_usuario = a.id_usuario
-        GROUP BY p.nome_plano
-        ORDER BY qtd_agendamentos DESC
-    )
-    LOOP
-        IF i.nome_plano IS NULL THEN
-            DBMS_OUTPUT.PUT_LINE('Plano de Saúde: Sem plano associado - Agendamentos: ' || i.qtd_agendamentos);
-        ELSE
-            DBMS_OUTPUT.PUT_LINE('Plano de Saúde: ' || i.nome_plano || ' - Agendamentos: ' || i.qtd_agendamentos);
-        END IF;
-    END LOOP;
-END;
-/
 
 
 
--- Este bloco exibe a quantidade de agendamentos agrupados pelo status do tratamento (concluído, em andamento, cancelado, etc.), 
--- agrupando pelo status e ordenando pela quantidade de agendamentos.
+
 
 
 
