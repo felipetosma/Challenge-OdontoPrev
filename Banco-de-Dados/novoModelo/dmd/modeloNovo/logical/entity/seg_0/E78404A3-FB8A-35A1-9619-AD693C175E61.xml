@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E78404A3-FB8A-35A1-9619-AD693C175E61" name="c_op_dentista">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:41:48 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_dentista" id="A4DE101A-BCF5-78D3-872B-638EE40EB467">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:42:14 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome_dentista" id="D525B4FA-4705-8008-7AA2-3CF3CADC0903">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:42:24 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="senha_dentista" id="A2DE5A44-C9D6-6CF7-9DC7-A41D612B9D20">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:42:36 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cro" id="E476EB48-5E56-A534-E4BE-43C394B02543">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:42:42 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_especialidade" id="DFB86F68-5760-33E0-75F0-BFD2E33018ED">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 01:19:51 UTC</createdTime>
+<generatorID>31E9D1E5-98CB-33A0-7C6D-CB14901CA86A</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<referedAttribute>91467C18-E44E-81E1-0104-859E15838BEC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8FCE8D86-0382-52DE-B043-5EB37C8E78F9" name="c_op_dentista PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:42:22 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A4DE101A-BCF5-78D3-872B-638EE40EB467</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="60823ED5-9600-6083-339B-19A490235F02" name="c_op_dentista_cro_un">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 01:07:14 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<newElementsIDs>E476EB48-5E56-A534-E4BE-43C394B02543</newElementsIDs>
+<usedAttributes>
+<attributeRef>E476EB48-5E56-A534-E4BE-43C394B02543</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

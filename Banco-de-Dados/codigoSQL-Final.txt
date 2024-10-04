@@ -20,7 +20,7 @@ CREATE TABLE c_op_agendamento (
     id_agendamento        NUMBER(30) NOT NULL,
     data_agendada         DATE NOT NULL,
     horario_agendado      DATE NOT NULL,
-    status_tratamento     VARCHAR2(20) NOT NULL,
+    status_agendamento    VARCHAR2(20) NOT NULL,
     descricao_agendamento VARCHAR2(300),
     id_dentista           NUMBER(30) NOT NULL,
     id_usuario            NUMBER(30) NOT NULL

@@ -3,7 +3,7 @@ import random
 from datetime import datetime, timedelta
 
 # Configurações de conexão
-dsn = oracledb.makedsn('HOST', 'PORT', service_name='SERVICE_NAME')  # substitua HOST, PORT e SERVICE_NAME
+dsn = oracledb.makedsn('oracle.fiap.com.br', '1521', service_name='orcl')  # substitua HOST, PORT e SERVICE_NAME
 connection = oracledb.connect(user='rm553528', password='150592', dsn=dsn)  # substitua USERNAME e PASSWORD
 cursor = connection.cursor()
 
