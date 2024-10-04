@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4E03277-D5C1-B108-7AD7-8906ABB16BA3" name="c_op_status">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>2CF0335C-3C4D-4DDB-6DF7-FFFAABE2A715</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_status" id="1CFB3C8C-9859-0638-873F-2FD1EF69CC01">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>3844A320-6856-1728-76D2-B8F6753D68C8</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_status" id="A3B4A226-C613-A0DF-7B88-2BC463612FC8">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>A995E414-955D-F8B4-AE57-4AD869F87A6E</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descr_status" id="35F0416B-E6AE-34E4-3D6C-43B956B1A92B">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>D2E412A3-2DDE-02DE-560F-26FDFA604AF4</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1E32E703-E630-D755-6CDD-F5B5541B4662" name="c_op_status_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>237978A0-BE17-1B19-3F95-FBD4CB8432A2</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CFB3C8C-9859-0638-873F-2FD1EF69CC01"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

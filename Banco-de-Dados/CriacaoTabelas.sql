@@ -14,7 +14,7 @@ DROP TABLE c_op_tratamento CASCADE CONSTRAINTS;
 
 DROP TABLE c_op_checklist CASCADE CONSTRAINTS;
 
-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE c_op_usuario (
     id_usuario     NUMBER(30) NOT NULL,
     nome_usuario   VARCHAR2(100) NOT NULL,

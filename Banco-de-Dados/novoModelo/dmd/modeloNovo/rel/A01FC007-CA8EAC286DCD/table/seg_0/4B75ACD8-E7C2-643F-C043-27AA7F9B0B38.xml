@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4B75ACD8-E7C2-643F-C043-27AA7F9B0B38" name="c_op_notificacao">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>81DC8492-B20E-FBE9-F46B-B5094232008F</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_notificacao" id="CC275D52-2BF2-6165-20B4-A21AA0BA3109">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>D4958052-8119-02CA-AEFC-FDDFF11A8A31</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mensagem" id="75452B67-846F-4ABC-C2D6-B85EE8728CCC">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>6AF8184F-0EDC-17CA-5114-3A6A1F46ECCD</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_envio" id="85F102BA-6F3B-EE01-D942-7777E61EE4E8">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>94C90256-BC53-3EF5-6727-40EBF10A1C93</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="leitura" id="21D76147-4A9F-7140-AF8D-708E14B912B9">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>6FF44B9B-770F-60BA-CADC-CBF682A8DAE0</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7C3152BB-9EA5-C772-D4D5-D2BFF617D9FB" name="c_op_notificacao_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>DBB5B2C3-9B13-2015-1C9A-070B8244F0F0</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC275D52-2BF2-6165-20B4-A21AA0BA3109"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

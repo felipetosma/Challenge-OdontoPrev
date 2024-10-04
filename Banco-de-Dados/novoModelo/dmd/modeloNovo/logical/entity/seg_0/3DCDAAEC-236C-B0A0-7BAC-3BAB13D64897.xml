@@ -41,9 +41,9 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="contato_plano" id="B2BDD51C-4230-8C9A-1335-B587A2DD6583">
-<createdBy>labsfiap</createdBy>
-<createdTime>2024-10-04 01:02:51 UTC</createdTime>
+<Attribute name="telefone_plano" id="DA517FE1-614F-B95C-F32F-2D2D36CE5B81">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 03:27:59 UTC</createdTime>
 <ownerDesignName>modeloNovo</ownerDesignName>
 <engineerTo>
 <item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
@@ -51,8 +51,22 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>20</dataTypePrecision>
-<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email_plano" id="3C94740A-06A0-B7F0-3E87-B81A92C135FE">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 03:28:17 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="id_tipo_plano" id="CC52ED18-5DA5-398C-4874-8BC20EBFD5D0">
 <createdBy>labsfiap</createdBy>
@@ -67,7 +81,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>30</dataTypePrecision>
-<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

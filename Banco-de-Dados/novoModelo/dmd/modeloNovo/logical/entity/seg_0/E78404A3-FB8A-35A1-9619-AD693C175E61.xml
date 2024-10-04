@@ -67,6 +67,32 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="telefone_dentista" id="E8FDCAE6-5C03-9AE5-A0FC-B218F319C495">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 03:27:06 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email_dentista" id="377B5F9E-1298-5221-AE9F-7A754A7CD0C3">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 03:28:43 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="id_especialidade" id="DFB86F68-5760-33E0-75F0-BFD2E33018ED">
 <createdBy>labsfiap</createdBy>
 <createdTime>2024-10-04 01:19:51 UTC</createdTime>

@@ -65,6 +65,21 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_tratamento" id="7BF417D7-048E-37D1-CFBC-19E0AA7F4D34">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:41:50 UTC</createdTime>
+<generatorID>C5FDE5A0-A1A8-2F8A-E46B-9733E44E02E8</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<referedAttribute>90E6AE0B-89CB-7572-554A-C98547CCED2E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="91015B8B-04B8-B9FF-E813-CFB044597199" containerWithKeyObject="DCDB174D-E4A0-F2B0-2C98-3B5BBF82BE14" localFKIndex="D052FBF5-E470-0C51-5522-EE600DCF5131" name="agendamento_status_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>B6281236-3061-306C-5266-D6781FC9CB05</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<referredTableLongName>c_op_status</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C4E03277-D5C1-B108-7AD7-8906ABB16BA3</referredTableID>
+<keyObject>1E32E703-E630-D755-6CDD-F5B5541B4662</keyObject>
+<referredKeyID>1E32E703-E630-D755-6CDD-F5B5541B4662</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_status</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

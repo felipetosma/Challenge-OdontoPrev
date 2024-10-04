@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="29BF5222-925B-8DB7-5966-7073CE04B188" name="c_op_tipo_plano">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>39E5F693-EA64-AFA9-C734-3BA6C8DF3F8F</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_tipo_plano" id="CC849F38-9C12-4B1C-F8DD-27D99CAA5A0B">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>702E8529-1D29-9418-0263-DD6B5A325190</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome_tipo_plano" id="8DC814D8-0F12-8ABA-A9D7-B78B89D148FA">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>A9A349B2-3CE4-47FB-6C2B-DE0416848578</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descr_tipo_plano" id="A8E5CEA1-567A-B3D2-972A-DFBC09982894">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>AFF18AB3-40D9-2AAD-644B-784191722D29</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6CB2ADDA-2CA5-DD14-F738-990EAE324921" name="c_op_tipo_plano_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>9EF0995D-FB92-9F43-066A-7C0E50BBB228</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC849F38-9C12-4B1C-F8DD-27D99CAA5A0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

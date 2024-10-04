@@ -1,0 +1,232 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="347C9FAA-26C7-9572-91B3-3AA630FB65DA" name="c_op_tratamento">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>6FA98E15-6500-248F-C8EB-9CDA1ACAB1B8</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_tratamento" id="41AEB115-0C5A-7C45-5BC3-16ECDF201CC5">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>90E6AE0B-89CB-7572-554A-C98547CCED2E</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_tratamento" id="2146DD41-14D7-6CDC-2ECD-B58BED5AF7B3">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>300324AC-3137-41F6-38BE-E4AE65530CDF</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_inicio_tratamento" id="2BDE5CD5-FB9B-59F4-2B46-A668D1E2D6B9">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>B533B948-22FC-99C9-2071-3878EFE6EA65</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_termino_tratamento" id="ADF36531-5D65-5CD7-6A8A-7B93D47CA7A6">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>326D7492-F130-C10E-8E8F-4AFA3B705E40</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descr_tratamento" id="5D5659F2-D5F9-1119-F6D1-25E134303115">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>B310112A-08F5-CBBD-1979-E7AECB497484</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_dentista" id="38379A9F-1EFD-6587-4D72-8A931F9E0D88">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>F96B9D1D-8809-5B07-69AB-37F5B1E59187</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="830953BC-43C6-5351-EF47-AF79A18D403F" referredColumn="9E3256C9-E800-5424-034F-1BF079FF7212"/>
+</associations>
+</Column>
+<Column name="id_usuario" id="AECA1978-00EC-8FA0-865D-4EC222947DC7">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>C0F0D1C1-B668-F316-9E4A-BA20AAEFFE56</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="01E70780-F4F3-B5B6-3FAC-E9781F20DE90" referredColumn="4BF0C65D-33C1-CC87-A00D-FDF97E98124F"/>
+</associations>
+</Column>
+<Column name="id_notificacao" id="E831B4D7-F2AB-02A2-B21A-5E6B89CA5A34">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>36FC79B5-2271-9507-EAE6-4E8FC3BF8322</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="338E818A-2B2E-E165-80DC-200652BC4509" referredColumn="CC275D52-2BF2-6165-20B4-A21AA0BA3109"/>
+</associations>
+</Column>
+<Column name="id_status" id="BEC1EB0C-E652-9A75-0375-FDD5A4DB9D96">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>EF219057-7AB4-6612-3754-0AEBEFFC1F1E</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E0635EAD-6883-A0B1-2984-CE3977083F7C" referredColumn="1CFB3C8C-9859-0638-873F-2FD1EF69CC01"/>
+</associations>
+</Column>
+<Column name="id_plano" id="F435E4CA-71D8-10BE-5714-689E7C04A2D3">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>131BF6A7-8263-2CA4-76A7-20FD04106FBC</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="72311813-3FDD-82D6-A521-594EAED68293" referredColumn="496D0545-4D27-58AA-307A-A203B70A7961"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CF6E78ED-8DE3-FD21-11EA-DB1C2513FF68" name="c_op_tratamento_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>8720B4C6-559C-396B-9ACC-8AA5B48AD4BE</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41AEB115-0C5A-7C45-5BC3-16ECDF201CC5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C79A946E-D0FB-2AC6-D612-4A880B29A866" name="c_op_tratamento__IDX">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D3BF461A-82B2-6C9B-1EF1-F15A7148105E</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="BEC1EB0C-E652-9A75-0375-FDD5A4DB9D96"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D7EECB3-16F0-6F6F-8D15-F58A28062F5B" name="tratamento_dentista_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>882883D0-C707-CE86-69BD-78DCDDEC14D0</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38379A9F-1EFD-6587-4D72-8A931F9E0D88"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA039BF2-66EB-2291-7BCB-BBA0F64C6036" name="tratamento_usuario_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>969B6CA2-A398-9900-95C2-0219E18AFB47</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AECA1978-00EC-8FA0-865D-4EC222947DC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D6B5B4FF-B11D-C15D-99D4-419C655B3DCE" name="tratamento_notificacao_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>C21CF364-7275-0644-92A1-04B35B0253DF</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E831B4D7-F2AB-02A2-B21A-5E6B89CA5A34"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75CFF761-DE19-C043-BF95-833237233758" name="tratamento_plano_de_saude_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>8D3ACDB4-6668-7EF3-18BF-525E61C9C7FC</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F435E4CA-71D8-10BE-5714-689E7C04A2D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C82585BA-00E5-162F-FB41-965F3F4DD46E" name="tratamento_status_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>D3BF461A-82B2-6C9B-1EF1-F15A7148105E</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BEC1EB0C-E652-9A75-0375-FDD5A4DB9D96"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

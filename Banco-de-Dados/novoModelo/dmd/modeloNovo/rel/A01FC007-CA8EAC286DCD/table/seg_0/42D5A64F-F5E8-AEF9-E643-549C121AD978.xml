@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="42D5A64F-F5E8-AEF9-E643-549C121AD978" name="c_op_plano_de_saude">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>3DCDAAEC-236C-B0A0-7BAC-3BAB13D64897</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_plano" id="496D0545-4D27-58AA-307A-A203B70A7961">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>F644ACBE-8B4F-C3B6-5804-509F7AA994BF</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome_plano" id="3753E9B4-0770-38DA-3507-617A1A92FEC8">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>86443429-92A0-D3EF-C391-FEF9FFF78896</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefone_plano" id="9A9B449F-883C-497B-6801-F9959EEAA6B4">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>DA517FE1-614F-B95C-F32F-2D2D36CE5B81</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email_plano" id="ED54AE81-617C-8E9F-1CAE-F16E03E44390">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>3C94740A-06A0-B7F0-3E87-B81A92C135FE</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_tipo_plano" id="F5D99148-F716-4BA1-45E0-1EFBAFE68648">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>CC52ED18-5DA5-398C-4874-8BC20EBFD5D0</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="77AB32A1-4A29-4139-8880-873FEB381458" referredColumn="CC849F38-9C12-4B1C-F8DD-27D99CAA5A0B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2645DEE4-DD19-F277-0B4D-9D76B4B5A1F2" name="c_op_plano_de_saude_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>BF4CB072-92AC-B929-7B07-3F0CFEA13CE6</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="496D0545-4D27-58AA-307A-A203B70A7961"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F155EE6-D4C0-BB2F-FA04-F99F56A6AD4B" name="plano_tipo_plano_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>1009A49F-BEA3-DD9B-0A0A-B21300FC60C3</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5D99148-F716-4BA1-45E0-1EFBAFE68648"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

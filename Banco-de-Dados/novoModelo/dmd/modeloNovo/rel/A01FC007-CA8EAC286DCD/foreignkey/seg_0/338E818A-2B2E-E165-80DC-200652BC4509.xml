@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="338E818A-2B2E-E165-80DC-200652BC4509" containerWithKeyObject="347C9FAA-26C7-9572-91B3-3AA630FB65DA" localFKIndex="D6B5B4FF-B11D-C15D-99D4-419C655B3DCE" name="tratamento_notificacao_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>C21CF364-7275-0644-92A1-04B35B0253DF</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<referredTableLongName>c_op_notificacao</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4B75ACD8-E7C2-643F-C043-27AA7F9B0B38</referredTableID>
+<keyObject>7C3152BB-9EA5-C772-D4D5-D2BFF617D9FB</keyObject>
+<referredKeyID>7C3152BB-9EA5-C772-D4D5-D2BFF617D9FB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_notificacao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

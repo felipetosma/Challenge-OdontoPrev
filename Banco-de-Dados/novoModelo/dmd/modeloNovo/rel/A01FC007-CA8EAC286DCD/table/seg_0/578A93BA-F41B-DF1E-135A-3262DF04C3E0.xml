@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="578A93BA-F41B-DF1E-135A-3262DF04C3E0" name="c_op_dentista_plano">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<ordsAlias>relation_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_plano" id="7600C4DD-1D07-B98A-2CFE-5175D90AC7D1">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D8114411-6CE5-B893-61E0-10E1473B7C7B" referredColumn="496D0545-4D27-58AA-307A-A203B70A7961"/>
+</associations>
+</Column>
+<Column name="id_dentista" id="931EC6B2-ABE4-0D2E-C7CA-305E9471F463">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F8D071A8-915B-4CB4-7EFB-389B1EC5820B" referredColumn="9E3256C9-E800-5424-034F-1BF079FF7212"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BBF5F185-AAB9-C3B7-8E7E-BAA376DAA0EB" name="Relation_10_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7600C4DD-1D07-B98A-2CFE-5175D90AC7D1"/>
+<colUsage columnID="931EC6B2-ABE4-0D2E-C7CA-305E9471F463"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2C1D89EF-4368-A625-B0E9-0332D6DE8320" name="c_op_plano_de_saude_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>810DCB5E-07A8-29AB-DD50-E7B80F8ADD0D</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7600C4DD-1D07-B98A-2CFE-5175D90AC7D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1475F97-0003-13E4-14C8-95B7035CA802" name="c_op_dentista_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>810DCB5E-07A8-29AB-DD50-E7B80F8ADD0D</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="931EC6B2-ABE4-0D2E-C7CA-305E9471F463"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

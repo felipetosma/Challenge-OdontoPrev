@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6B172BF1-677B-853C-E2C6-71187ABEAA7E" name="c_op_checklist">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>9751BC31-EC32-1A52-8A4D-08BC5494D53A</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_checklist" id="2D25FC3D-CC6D-926E-552A-8F3503C2E93F">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>2A861905-F0A1-E8CB-1680-1A471E28756B</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nivel" id="6FFCB614-89EF-5663-52F2-0F1624975B64">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>42FA2932-C39B-2C58-7993-DDBB776FD6FD</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="escovacao_dentes" id="60FC4A40-89D7-925D-CDFE-17121D054305">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>974AB940-F816-C789-4D13-35FE28748C0D</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fio_dental" id="C727D261-277C-09C7-A0D3-8C5AE10641BE">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>3216B35C-5B21-509A-2DAE-31805F841913</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="enxaguante_bucal" id="CB76C66F-5F92-9F1C-6983-232711F7A2A5">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>C5D4B9AB-0BC7-F52F-F9B2-39300C3F4546</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_usuario" id="4B4C8C94-49E5-2005-7FC3-F6B11BA76222">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>FDE4BF16-041C-EC50-8F79-B475BC022811</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1FF8CF0D-2550-E7C9-B2FA-7C6E6BED3A6E" referredColumn="4BF0C65D-33C1-CC87-A00D-FDF97E98124F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D089C437-CD2A-CB53-C1D4-2DE1B6220291" name="c_op_checklist_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>F9DA7644-0160-FC10-5C65-E5D797CC24D1</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D25FC3D-CC6D-926E-552A-8F3503C2E93F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D70FECDB-0B14-D3A7-4D83-40C060C86DA2" name="c_op_checklist__IDX">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>FF33518C-4BAB-0BB8-0CCA-C235E70D9473</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="4B4C8C94-49E5-2005-7FC3-F6B11BA76222"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="03F49562-5404-BA80-39EC-46AE2737D02C" name="checklist_usuario_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>FF33518C-4BAB-0BB8-0CCA-C235E70D9473</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B4C8C94-49E5-2005-7FC3-F6B11BA76222"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

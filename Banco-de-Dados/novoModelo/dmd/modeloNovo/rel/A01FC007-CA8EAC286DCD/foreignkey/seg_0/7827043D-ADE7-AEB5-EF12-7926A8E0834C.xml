@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7827043D-ADE7-AEB5-EF12-7926A8E0834C" containerWithKeyObject="6453F37F-5054-27C3-30F0-374FB3578AA8" localFKIndex="AE43DA18-FBCD-EA0A-0362-31B2E4C0CBBC" name="dentista_especialidade_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>31E9D1E5-98CB-33A0-7C6D-CB14901CA86A</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<referredTableLongName>c_op_especialidade</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0C2AB9A0-DBE1-F549-A6AD-781A82D2FA2A</referredTableID>
+<keyObject>626C086A-D71B-4B72-7589-BAFE927F0718</keyObject>
+<referredKeyID>626C086A-D71B-4B72-7589-BAFE927F0718</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_especialidade</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

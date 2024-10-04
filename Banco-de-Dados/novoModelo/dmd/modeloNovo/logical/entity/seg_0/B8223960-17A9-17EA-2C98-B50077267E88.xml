@@ -80,6 +80,19 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="telefone_usuario" id="7C7A0C48-788D-3D8C-BD39-D5FEECC37EFC">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 03:26:43 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="0BADBCBA-5DDA-2F0D-A62E-F9288C25C49D" name="c_op_usuario PK">

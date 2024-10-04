@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DCDB174D-E4A0-F2B0-2C98-3B5BBF82BE14" name="c_op_agendamento">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>1CEAEE5F-43D4-B37F-8A7D-B99771928804</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_agendamento" id="131AF2CA-8983-E3BC-1522-CF62697E60F1">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>B867D187-01E9-62D5-F405-60E0994AD4FF</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_agendada" id="93C050E5-1F64-0C1C-F2EC-0C0AFE845EB0">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>DE1B2478-4A6A-4FC5-359A-070C86E3FCA9</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="horario_agendado" id="8FD4F738-4E70-8184-C4E6-4D7F03265E08">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>C9820169-937F-521C-5552-64D6795A9E67</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="c_op_status_id_status" id="CCB69477-0A12-74E9-0BB5-18ACDE2DB330">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>399F9635-9E0E-AA8E-9955-283B09AE0AC3</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91015B8B-04B8-B9FF-E813-CFB044597199" referredColumn="1CFB3C8C-9859-0638-873F-2FD1EF69CC01"/>
+</associations>
+</Column>
+<Column name="id_tratamento" id="48D7308D-D946-1A9F-9C88-1FF5C1F5745C">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>7BF417D7-048E-37D1-CFBC-19E0AA7F4D34</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EEF6CBB6-422E-BBC8-2CD4-7D431138609E" referredColumn="41AEB115-0C5A-7C45-5BC3-16ECDF201CC5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1DB552C3-4F1A-8DBA-FD6D-06EF008D6085" name="c_op_agendamento_PK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>99319C8E-FFB4-642A-CCAF-FEC87F6BD069</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="131AF2CA-8983-E3BC-1522-CF62697E60F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43A881C4-84E0-D292-7B6F-CC7CA5AD8D91" name="c_op_agendamento__IDX">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>B6281236-3061-306C-5266-D6781FC9CB05</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="CCB69477-0A12-74E9-0BB5-18ACDE2DB330"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9CA3C6C7-AD20-8D38-F801-09AA20C203E1" name="agendamento_tratamento_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>C5FDE5A0-A1A8-2F8A-E46B-9733E44E02E8</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48D7308D-D946-1A9F-9C88-1FF5C1F5745C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D052FBF5-E470-0C51-5522-EE600DCF5131" name="agendamento_status_FK">
+<createdBy>felip</createdBy>
+<createdTime>2024-10-04 04:43:43 UTC</createdTime>
+<generatorID>B6281236-3061-306C-5266-D6781FC9CB05</generatorID>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CCB69477-0A12-74E9-0BB5-18ACDE2DB330"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

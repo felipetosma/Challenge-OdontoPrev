@@ -1,0 +1,576 @@
+import oracledb
+import random
+from datetime import datetime, timedelta
+
+# Configurações de conexão
+dsn = oracledb.makedsn('oracle.fiap.com.br', '1521', service_name='orcl')  # substitua HOST, PORT e SERVICE_NAME
+connection = oracledb.connect(user='rm553528', password='150592', dsn=dsn)  # substitua USERNAME e PASSWORD
+cursor = connection.cursor()
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+# Inserts para c_op_usuario
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (1, 'Ana Souza', 'senha@123', 'ana.souza@example.com', 'CARTEIRA1234', 11999999999))
+
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (2, 'Carlos Silva', 'senha@456', 'carlos.silva@example.com', 'CARTEIRA5678', 11988888888))
+
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (3, 'Maria Santos', 'senha@789', 'maria.santos@example.com', 'CARTEIRA9012', 11977777777))
+
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (4, 'João Oliveira', 'senha@234', 'joao.oliveira@example.com', 'CARTEIRA3456', 11966666666))
+
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (5, 'Laura Pereira', 'senha@567', 'laura.pereira@example.com', 'CARTEIRA7890', 11955555555))
+
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (6, 'Pedro Ferreira', 'senha@890', 'pedro.ferreira@example.com', 'CARTEIRA2345', 11944444444))
+
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (7, 'Camila Costa', 'senha@345', 'camila.costa@example.com', 'CARTEIRA6789', 11933333333))
+
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (8, 'Rafael Almeida', 'senha@678', 'rafael.almeida@example.com', 'CARTEIRA0123', 11922222222))
+
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (9, 'Julia Rodrigues', 'senha@901', 'julia.rodrigues@example.com', 'CARTEIRA4567', 11911111111))
+
+cursor.execute("""
+    INSERT INTO c_op_usuario (id_usuario, nome_usuario, senha_usuario, email_usuario, nr_carteira, telefone_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (10, 'Marcos Lima', 'senha@234', 'marcos.lima@example.com', 'CARTEIRA8901', 11900000000))
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Inserts para c_op_especialidade
+
+cursor.execute("""
+    INSERT INTO c_op_especialidade (id_especialidade, tipo_especialidade, descr_especialidade)
+    VALUES (:1, :2, :3)""",
+    (1, 'Ortodontia', 'Especialidade que corrige a posição dos dentes e dos ossos maxilares'))
+
+cursor.execute("""
+    INSERT INTO c_op_especialidade (id_especialidade, tipo_especialidade, descr_especialidade)
+    VALUES (:1, :2, :3)""",
+    (2, 'Endodontia', 'Tratamento de canal e outras doenças da polpa dentária'))
+
+cursor.execute("""
+    INSERT INTO c_op_especialidade (id_especialidade, tipo_especialidade, descr_especialidade)
+    VALUES (:1, :2, :3)""",
+    (3, 'Periodontia', 'Tratamento das doenças das gengivas e ossos de suporte dos dentes'))
+
+cursor.execute("""
+    INSERT INTO c_op_especialidade (id_especialidade, tipo_especialidade, descr_especialidade)
+    VALUES (:1, :2, :3)""",
+    (4, 'Implantodontia', 'Colocação de implantes dentários'))
+
+cursor.execute("""
+    INSERT INTO c_op_especialidade (id_especialidade, tipo_especialidade, descr_especialidade)
+    VALUES (:1, :2, :3)""",
+    (5, 'Odontopediatria', 'Cuidados dentários especializados para crianças'))
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Novos inserts para c_op_checklist
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (1, 3, 3, 2, 1, 1))
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (2, 2, 2, 1, 0, 2))
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (3, 4, 3, 3, 2, 3))
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (4, 1, 1, 0, 0, 4))
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (5, 3, 3, 2, 1, 5))
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (6, 2, 2, 1, 1, 6))
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (7, 4, 3, 3, 3, 7))
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (8, 3, 3, 2, 2, 8))
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (9, 2, 2, 1, 0, 9))
+
+cursor.execute("""
+    INSERT INTO c_op_checklist (id_checklist, nivel, escovacao_dentes, fio_dental, enxaguante_bucal, id_usuario)
+    VALUES (:1, :2, :3, :4, :5, :6)""",
+    (10, 3, 3, 2, 1, 10))
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Novos inserts para c_op_dentista
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (1, 'Dr. Roberto Andrade', 'senha123', 'CRO12345', 11999999999, 'roberto.andrade@example.com', 1))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (2, 'Dra. Carla Mendes', 'senha456', 'CRO23456', 11988888888, 'carla.mendes@example.com', 2))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (3, 'Dr. Fernando Santos', 'senha789', 'CRO34567', 11977777777, 'fernando.santos@example.com', 3))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (4, 'Dra. Luciana Oliveira', 'senha234', 'CRO45678', 11966666666, 'luciana.oliveira@example.com', 4))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (5, 'Dr. Marcelo Costa', 'senha567', 'CRO56789', 11955555555, 'marcelo.costa@example.com', 5))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (6, 'Dra. Patricia Lima', 'senha890', 'CRO67890', 11944444444, 'patricia.lima@example.com', 1))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (7, 'Dr. Ricardo Ferreira', 'senha345', 'CRO78901', 11933333333, 'ricardo.ferreira@example.com', 2))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (8, 'Dra. Sandra Rodrigues', 'senha678', 'CRO89012', 11922222222, 'sandra.rodrigues@example.com', 3))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (9, 'Dr. Thiago Almeida', 'senha901', 'CRO90123', 11911111111, 'thiago.almeida@example.com', 4))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista (id_dentista, nome_dentista, senha_dentista, cro, telefone_dentista, email_dentista, id_especialidade)
+    VALUES (:1, :2, :3, :4, :5, :6, :7)""",
+    (10, 'Dra. Vanessa Pereira', 'senha234', 'CRO01234', 11900000000, 'vanessa.pereira@example.com', 5))
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Novos inserts para c_op_status
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (1, 'Agendado', 'Consulta marcada e confirmada'))
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (2, 'Em andamento', 'Tratamento iniciado e em progresso'))
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (3, 'Concluído', 'Tratamento finalizado com sucesso'))
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (4, 'Cancelado', 'Consulta ou tratamento cancelado'))
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (5, 'Reagendado', 'Consulta remarcada para outra data'))
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (6, 'Em espera', 'Paciente na lista de espera para atendimento'))
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (7, 'Não compareceu', 'Paciente faltou à consulta agendada'))
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (8, 'Em revisão', 'Paciente em fase de acompanhamento pós-tratamento'))
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (9, 'Pendente de pagamento', 'Aguardando pagamento do tratamento'))
+
+cursor.execute("""
+    INSERT INTO c_op_status (id_status, tipo_status, descr_status)
+    VALUES (:1, :2, :3)""",
+    (10, 'Emergência', 'Atendimento de urgência'))
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Novos inserts para c_op_tipo_plano
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (1, 'Básico', 'Cobertura para procedimentos preventivos e básicos'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (2, 'Intermediário', 'Cobertura básica mais alguns procedimentos especializados'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (3, 'Completo', 'Cobertura ampla incluindo a maioria dos procedimentos'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (4, 'Premium', 'Cobertura total com benefícios adicionais'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (5, 'Familiar', 'Plano com cobertura para toda a família'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (6, 'Empresarial', 'Plano corporativo para funcionários'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (7, 'Estudantil', 'Plano com descontos para estudantes'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (8, 'Sênior', 'Plano focado em necessidades de pacientes idosos'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (9, 'Ortodôntico', 'Plano especializado em tratamentos ortodônticos'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""",
+    (10, 'Emergencial', 'Cobertura para atendimentos de urgência e emergência'))
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Inserts na tabela tipo plano
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""", 
+    (1, 'Plano Básico', 'Cobertura básica'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""", 
+    (2, 'Plano Premium', 'Cobertura premium'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""", 
+    (3, 'Plano Família', 'Cobertura para dependentes familiares'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""", 
+    (4, 'Plano Executivo', 'Cobertura executiva de saúde'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""", 
+    (5, 'Plano Master', 'Cobertura estendida com benefícios extras'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""", 
+    (6, 'Plano Odontológico', 'Cobertura exclusiva para tratamentos dentários'))
+
+cursor.execute("""
+    INSERT INTO c_op_tipo_plano (id_tipo_plano, nome_tipo_plano, descr_tipo_plano)
+    VALUES (:1, :2, :3)""", 
+    (7, 'Plano Empresarial', 'Cobertura voltada para empresas'))
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Inserts na tabela Plano de saúde
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (1, 'Alice', 11987654321, 'contato@alice.com', 1))
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (2, 'Assim Saúde', 11987654322, 'contato@assim-saude.com', 2))
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (3, 'Intermédica Notredame', 11987654323, 'contato@intermedica-notredame.com', 3))
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (4, 'Klini Saúde', 11987654324, 'contato@klini-saude.com', 4))
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (5, 'MedSênior', 11987654325, 'contato@medsenior.com', 5))
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (6, 'Nosso Médico Intermédica', 11987654326, 'contato@nosso-medico-intermedica.com', 6))
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (7, 'Portomed - Porto Seguro', 11987654327, 'contato@portoseguro.com', 7))
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (8, 'SB Saúde', 11987654328, 'contato@sbsaude.com', 3))
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (9, 'Brasil Dental', 11987654329, 'contato@brasildental.com', 5))
+
+cursor.execute("""
+    INSERT INTO c_op_plano_de_saude (id_plano, nome_plano, telefone_plano, email_plano, id_tipo_plano)
+    VALUES (:1, :2, :3, :4, :5)""", 
+    (10, 'Bradesco Saúde', 11987654330, 'contato@bradescosaude.com', 2))
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Inserts na tabela Tratamentos
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (1, 'Limpeza', '2023-01-10', '2023-01-10', 'Limpeza completa', 1, 1, 1, 1, 3, 1))
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (2, 'Canal', '2023-02-15', '2023-03-05', 'Tratamento de canal no molar', 2, 2, 2, 2, 3, 2))
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (3, 'Clareamento', '2023-03-12', '2023-03-12', 'Clareamento dentário completo', 3, 3, 3, 3, 3, 3))
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (4, 'Aparelho', '2023-04-20', NULL, 'Colocação de aparelho ortodôntico', 4, 4, 4, 4, 2, 4))
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (5, 'Extração', '2023-05-05', '2023-05-05', 'Extração do siso', 5, 5, 5, 5, 3, 5))
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (6, 'Restauração', '2023-06-10', '2023-06-10', 'Restauração de dente frontal', 6, 6, 6, 6, 3, 6))
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (7, 'Implante', '2023-07-15', '2023-09-15', 'Implante dentário', 7, 7, 7, 7, 3, 7))
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (8, 'Ortodontia', '2023-08-10', NULL, 'Ajuste ortodôntico mensal', 8, 8, 8, 8, 2, 8))
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (9, 'Canal', '2023-09-01', '2023-09-20', 'Tratamento de canal no incisivo', 9, 9, 9, 9, 3, 9))
+
+cursor.execute("""
+    INSERT INTO c_op_tratamento (id_tratamento, tipo_tratamento, dt_inicio_tratamento, dt_termino_tratamento, descr_tratamento, id_dentista, id_usuario, id_notificacao, id_agendamento, id_status, id_plano)
+    VALUES (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)""", 
+    (10, 'Ponte Fixa', '2023-10-05', NULL, 'Colocação de ponte fixa', 10, 10, 10, 10, 1, 10))
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Inserts na tabela Dentista-Plano
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (1, 1))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (2, 2))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (3, 3))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (4, 4))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (5, 5))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (6, 6))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (7, 7))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (8, 8))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (9, 9))
+
+cursor.execute("""
+    INSERT INTO c_op_dentista_plano (id_plano, id_dentista)
+    VALUES (:1, :2)""", 
+    (10, 10))
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Inserts na tabela Agendamentos
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendado, id_status)
+    VALUES (1, TO_DATE('25/12/2023', 'DD/MM/YYYY'), TO_DATE('13:00:00', 'HH24:MI:SS'), 2)
+""")
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendada, id_status)
+    VALUES (2, TO_DATE('03/01/2024', 'DD/MM/YYYY'), TO_DATE('10:30:00', 'HH24:MI:SS'), 1)
+""")
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendada, id_status)
+    VALUES (3, TO_DATE('15/04/2023', 'DD/MM/YYYY'), TO_DATE('16:45:00', 'HH24:MI:SS'), 3)
+""")
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendada, id_status)
+    VALUES (4, TO_DATE('28/02/2024', 'DD/MM/YYYY'), TO_DATE('09:15:00', 'HH24:MI:SS'), 2)
+""")
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendada, id_status)
+    VALUES (5, TO_DATE('10/07/2023', 'DD/MM/YYYY'), TO_DATE('17:30:00', 'HH24:MI:SS'), 1)
+""")
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendada, id_status)
+    VALUES (6, TO_DATE('22/11/2023', 'DD/MM/YYYY'), TO_DATE('12:00:00', 'HH24:MI:SS'), 3)
+""")
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendada, id_status)
+    VALUES (7, TO_DATE('05/09/2024', 'DD/MM/YYYY'), TO_DATE('15:45:00', 'HH24:MI:SS'), 2)
+""")
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendada, id_status)
+    VALUES (8, TO_DATE('18/03/2024', 'DD/MM/YYYY'), TO_DATE('11:15:00', 'HH24:MI:SS'), 1)
+""")
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendada, id_status)
+    VALUES (9, TO_DATE('01/06/2023', 'DD/MM/YYYY'), TO_DATE('18:30:00', 'HH24:MI:SS'), 3)
+""")
+
+cursor.execute("""
+    INSERT INTO c_op_agendamento (id_agendamento, data_agendada, horario_agendada, id_status)
+    VALUES (10, TO_DATE('14/10/2023', 'DD/MM/YYYY'), TO_DATE('09:00:00', 'HH24:MI:SS'), 2)
+""")
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Commit das transações e fechamento da conexão
+connection.commit()
+cursor.close()
+connection.close()
+
+print("Registros inseridos com sucesso.")
