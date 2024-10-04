@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6FA98E15-6500-248F-C8EB-9CDA1ACAB1B8" name="c_op_tratamento ">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:35:41 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_tratamento         " id="90E6AE0B-89CB-7572-554A-C98547CCED2E">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:35:49 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_tratamento" id="300324AC-3137-41F6-38BE-E4AE65530CDF">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:36:06 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_inicio_tratamento" id="B533B948-22FC-99C9-2071-3878EFE6EA65">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:36:33 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_termino_tratamento" id="326D7492-F130-C10E-8E8F-4AFA3B705E40">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:36:45 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descricao_tratamento" id="B310112A-08F5-CBBD-1979-E7AECB497484">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:37:03 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_tratamento" id="57E18440-FF49-94DC-14A6-C26BF508FCCF">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:37:15 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8720B4C6-559C-396B-9ACC-8AA5B48AD4BE" name="c_op_tratamento PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2024-10-04 00:35:52 UTC</createdTime>
+<ownerDesignName>modeloNovo</ownerDesignName>
+<engineerTo>
+<item key="A01FC007-99EB-A6C6-1E68-CA8EAC286DCD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>90E6AE0B-89CB-7572-554A-C98547CCED2E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
