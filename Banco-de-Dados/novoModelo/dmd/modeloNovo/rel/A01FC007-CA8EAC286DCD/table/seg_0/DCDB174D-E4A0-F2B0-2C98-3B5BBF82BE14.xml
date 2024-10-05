@@ -42,7 +42,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="c_op_status_id_status" id="CCB69477-0A12-74E9-0BB5-18ACDE2DB330">
+<Column name="id_status" id="CCB69477-0A12-74E9-0BB5-18ACDE2DB330">
 <createdBy>felip</createdBy>
 <createdTime>2024-10-04 04:43:43 UTC</createdTime>
 <generatorID>399F9635-9E0E-AA8E-9955-283B09AE0AC3</generatorID>

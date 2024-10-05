@@ -162,17 +162,6 @@
 <colUsage columnID="41AEB115-0C5A-7C45-5BC3-16ECDF201CC5"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="C79A946E-D0FB-2AC6-D612-4A880B29A866" name="c_op_tratamento__IDX">
-<createdBy>felip</createdBy>
-<createdTime>2024-10-04 04:43:43 UTC</createdTime>
-<ownerDesignName>modeloNovo</ownerDesignName>
-<indexState>Unique Plain Index</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<relationGeneratorID>D3BF461A-82B2-6C9B-1EF1-F15A7148105E</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="BEC1EB0C-E652-9A75-0375-FDD5A4DB9D96"/>
-</indexColumnUsage>
-</ind_PK_UK>
 <ind_PK_UK id="6D7EECB3-16F0-6F6F-8D15-F58A28062F5B" name="tratamento_dentista_FK">
 <createdBy>felip</createdBy>
 <createdTime>2024-10-04 04:43:43 UTC</createdTime>

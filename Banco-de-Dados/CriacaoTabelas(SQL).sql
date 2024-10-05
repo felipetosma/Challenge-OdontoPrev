@@ -61,7 +61,7 @@ CREATE TABLE c_op_checklist (
 
 CREATE UNIQUE INDEX c_op_checklist__idx ON
     c_op_checklist (
-        c_op_usuario_id_usuario
+        id_usuario
     ASC );
 
 ALTER TABLE c_op_checklist ADD CONSTRAINT c_op_checklist_pk PRIMARY KEY ( id_checklist );

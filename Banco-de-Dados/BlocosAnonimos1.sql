@@ -1,8 +1,9 @@
+SET SERVEROUTPUT ON;
 --Explicação:
 -- Este bloco exibe a quantidade de tratamentos realizados por cada dentista, agrupando e ordenando pelos dentistas.
 
 DECLARE
-    v_nome_dentista   VARCHAR2(100);
+    v_nome_dentista   VARCHAR2(100):= '&DIGITEONOVONOME';
     v_qtd_tratamentos NUMBER;
 BEGIN
     -- Seleciona o primeiro dentista com base na ordenação por tratamentos (primeiro da lista)
@@ -100,11 +101,62 @@ END;
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
+DECLARE
+    v_nome_dentista   VARCHAR2(100) := '&DIGITE_O_NOME_DO_DENTISTA';
+    v_qtd_tratamentos NUMBER;
+BEGIN
+    SELECT
+        COUNT(t.id_tratamento)
+    INTO
+        v_qtd_tratamentos
+    FROM
+        c_op_dentista d
+        INNER JOIN c_op_tratamento t ON d.id_dentista = t.id_dentista
+    WHERE
+        LOWER(d.nome_dentista) = LOWER(v_nome_dentista);
+
+    IF v_qtd_tratamentos IS NOT NULL THEN
+        dbms_output.put_line('Dentista: '
+                             || v_nome_dentista
+                             || ' - Tratamentos: '
+                             || v_qtd_tratamentos);
+    ELSE
+        dbms_output.put_line('Nenhum dentista encontrado com o nome: ' || v_nome_dentista);
+    END IF;
+
+END;
 
 
 
+----------------------------------------------------------------
+
+DECLARE
+    v_nome_usuario VARCHAR2(100);
+    v_total_tratamentos NUMBER;
+    v_tipo_status VARCHAR2(50);
+BEGIN
+    SELECT 
+        u.nome_usuario,
+        COUNT(t.id_tratamento),
+        MAX(s.tipo_status)
+    INTO 
+        v_nome_usuario,
+        v_total_tratamentos,
+        v_tipo_status
+    FROM 
+        c_op_usuario u
+        LEFT JOIN c_op_tratamento t ON u.id_usuario = t.id_usuario
+        LEFT JOIN c_op_status s ON t.id_status = s.id_status
+    GROUP BY 
+        u.nome_usuario
+    ORDER BY 
+        COUNT(t.id_tratamento) DESC
+    FETCH FIRST 1 ROW ONLY;
+
+    DBMS_OUTPUT.PUT_LINE('Usuário com mais tratamentos: ' || v_nome_usuario || 
+                         ' | Total de Tratamentos: ' || v_total_tratamentos ||
+                         ' | Status mais recente: ' || NVL(v_tipo_status, 'N/A'));
+END;
 
 
-
-
-
+----------------------------------------------------------------
