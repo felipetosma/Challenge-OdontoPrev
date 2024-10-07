@@ -1,0 +1,16 @@
+graph TD
+    A[Concepção e Planejamento] --> B[Análise de Requisitos]
+    B --> C[Design de UX/UI]
+    C --> D[Desenvolvimento do Backend]
+    C --> E[Desenvolvimento do Frontend]
+    D --> F[Integração de API]
+    E --> F
+    F --> G[Testes]
+    G --> H{Aprovado?}
+    H -->|Sim| I[Implantação]
+    H -->|Não| G
+    I --> J[Monitoramento e Feedback]
+    J --> K[Manutenção e Atualizações]
+    K --> L{Necessidade de novas features?}
+    L -->|Sim| B
+    L -->|Não| J

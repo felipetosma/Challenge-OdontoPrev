@@ -1,0 +1,22 @@
+graph TD
+    A[Registro do Usuário] --> B[Login no Aplicativo]
+    B --> C[Dashboard Principal]
+    C --> D[Monitoramento de Tratamentos]
+    C --> E[Checklist de Cuidados Diários]
+    C --> F[Visualização de Histórico]
+    E --> G{Cuidados Realizados?}
+    G -->|Sim| H[Atualização de Pontos/Recompensas]
+    G -->|Não| I[Envio de Notificação de Lembrete]
+    D --> J[Atualização de Progresso]
+    F --> K[Geração de Relatórios]
+    H --> L[Avaliação de Metas Atingidas]
+    L --> M{Metas Atingidas?}
+    M -->|Sim| N[Oferecimento de Novas Metas]
+    M -->|Não| O[Ajuste de Plano de Cuidados]
+    K --> P[Compartilhamento com Dentista]
+    P --> Q[Análise e Feedback do Profissional]
+    Q --> R[Atualização de Recomendações]
+    R --> C
+    I --> C
+    N --> C
+    O --> C
