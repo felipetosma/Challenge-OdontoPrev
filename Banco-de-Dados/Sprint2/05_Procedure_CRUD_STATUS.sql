@@ -1,6 +1,4 @@
--- CRUD tabela C_OP_STATUS
-
-CREATE OR REPLACE PROCEDURE CRUD_STATUS (
+create or replace PROCEDURE CRUD_STATUS (
     v_operacao      IN VARCHAR2,
     v_id_status     IN c_op_status.id_status%TYPE,
     v_tipo_status   IN c_op_status.tipo_status%TYPE,
@@ -47,10 +45,10 @@ END CRUD_STATUS;
 
 BEGIN
     CRUD_STATUS(
-        v_operacao      => 'INSERT',   
-        v_id_status     => 11,                     
-        v_tipo_status   => 'Aguardando confirmação do denttista',    
-        v_descr_status  => 'O status está ativo.'   
+        v_operacao      => 'INSERT',
+        v_id_status     => 11,               -- Exemplo de ID para o status
+        v_tipo_status   => 'Aguardando confirmação',         -- Exemplo de tipo de status
+        v_descr_status  => 'Esperando a confirmação do dentista ou clinica'   -- Exemplo de descrição do status
     );
 END;
 
