@@ -75,3 +75,18 @@ EXCEPTION
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('Erro ao realizar a operação: ' || SQLERRM);
 END CRUD_USUARIO;
+
+
+BEGIN
+    CRUD_USUARIO(
+        v_operacao         => 'INSERT',
+        v_id_usuario       => 666,
+        v_nome_usuario     => 'Felipe Amador',
+        v_senha_usuario    => 'SenhaSegura4545',
+        v_email_usuario    => 'rapha.amador@email.com',
+        v_nr_carteira      => '12548844',
+        v_telefone_usuario => 11994151589
+    );
+END;
+
+
