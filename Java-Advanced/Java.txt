@@ -1,1 +1,10 @@
-Java
+http://localhost:8080/usuarios/withProcedure
+
+{
+    "idUsuario": 1,
+    "nomeUsuario": "João Silva",
+    "senhaUsuario": "senha123",
+    "emailUsuario": "joao.silva@example.com",
+    "nrCarteira": "12345",
+    "telefoneUsuario": "99999-9999"
+}
