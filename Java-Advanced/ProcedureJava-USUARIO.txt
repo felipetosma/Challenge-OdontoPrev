@@ -18,19 +18,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 ------------------------------------------------------------------------------------
 SERVICE:
 
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-@Service
-public class UsuarioService {
-
-    private final UsuarioRepository usuarioRepository;
-
-    public UsuarioService(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
-    }
-
-    @Transactional
+@Transactional
     public void insertWithProcedure(UsuarioDTO usuarioDTO) {
         usuarioRepository.CRUD_USUARIO(
             "INSERT", 
@@ -41,34 +29,54 @@ public class UsuarioService {
             usuarioDTO.getNrCarteira(), 
             usuarioDTO.getTelefoneUsuario()
         );
-    }
 }
 
+@Transactional
+public void updateWithProcedure(UsuarioDTO usuarioDTO) {
+    usuarioRepository.CRUD_USUARIO(
+        "UPDATE",
+        usuarioDTO.getIdUsuario(),
+        usuarioDTO.getNomeUsuario(),
+        usuarioDTO.getSenhaUsuario(),
+        usuarioDTO.getEmailUsuario(),
+        usuarioDTO.getNrCarteira(),
+        usuarioDTO.getTelefoneUsuario()
+    );
+}
+
+@Transactional
+public void deleteWithProcedure(Long idUsuario) {
+    usuarioRepository.CRUD_USUARIO(
+        "DELETE",
+        idUsuario,
+        null,
+        null,
+        null,
+        null,
+        null
+    );
+}
 
 
 ------------------------------------------------------------------------------------
 CONTROLLER:
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
-
-@RestController
-@RequestMapping("/usuarios")
-public class UsuarioController {
-
-    private final UsuarioService usuarioService;
-
-    public UsuarioController(UsuarioService usuarioService) {
-        this.usuarioService = usuarioService;
-    }
-
-    @PostMapping("/withProcedure")
+@PostMapping("/withProcedure")
     public ResponseEntity<String> insertWithProcedure(@RequestBody @Valid UsuarioDTO usuarioDTO) {
         usuarioService.insertWithProcedure(usuarioDTO);
         return ResponseEntity.ok("Usuário inserido com sucesso.");
-    }
+}
+
+@PutMapping("/withProcedure")
+public ResponseEntity<String> updateWithProcedure(@RequestBody @Valid UsuarioDTO usuarioDTO) {
+    usuarioService.updateWithProcedure(usuarioDTO);
+    return ResponseEntity.ok("Usuário atualizado com sucesso.");
+}
+	
+@DeleteMapping("/withProcedure/{idUsuario}")
+public ResponseEntity<String> deleteWithProcedure(@PathVariable Long idUsuario) {
+    usuarioService.deleteWithProcedure(idUsuario);
+    return ResponseEntity.ok("Usuário deletado com sucesso.");
 }
 
 
@@ -91,9 +99,8 @@ public class UsuarioDTO {
     private String emailUsuario;
 
     private String nrCarteira;
-    private String telefoneUsuario;
+    private Long telefoneUsuario;
 
-    // Getters e Setters
 }
 
 ------------------------------------------------------------------------------------

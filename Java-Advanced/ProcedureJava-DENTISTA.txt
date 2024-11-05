@@ -21,19 +21,7 @@ public interface DentistaRepository extends JpaRepository<Dentista, Long> {
 ------------------------------------------------------------------------------------
 SERVICE:
 
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-@Service
-public class DentistaService {
-
-    private final DentistaRepository dentistaRepository;
-
-    public DentistaService(DentistaRepository dentistaRepository) {
-        this.dentistaRepository = dentistaRepository;
-    }
-
-    @Transactional
+@Transactional
     public void insertWithProcedure(DentistaDTO dentistaDTO) {
         dentistaRepository.CRUD_DENTISTA(
             "INSERT",
@@ -45,35 +33,63 @@ public class DentistaService {
             dentistaDTO.getEmailDentista(),
             dentistaDTO.getIdEspecialidade()
         );
-    }
 }
+
+@Transactional
+public void updateWithProcedure(DentistaDTO dentistaDTO) {
+    dentistaRepository.CRUD_DENTISTA(
+        "UPDATE",
+        dentistaDTO.getIdDentista(),
+        dentistaDTO.getNomeDentista(),
+        dentistaDTO.getSenhaDentista(),
+        dentistaDTO.getCro(),
+        dentistaDTO.getTelefoneDentista(),
+        dentistaDTO.getEmailDentista(),
+        dentistaDTO.getIdEspecialidade()
+    );
+}
+
+
+@Transactional
+public void deleteWithProcedure(Long idDentista) {
+    dentistaRepository.CRUD_DENTISTA(
+        "DELETE",
+        idDentista,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    );
+}
+
 
 
 
 ------------------------------------------------------------------------------------
 CONTROLLER:
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
-
-@RestController
-@RequestMapping("/dentistas")
-public class DentistaController {
-
-    private final DentistaService dentistaService;
-
-    public DentistaController(DentistaService dentistaService) {
-        this.dentistaService = dentistaService;
-    }
-
-    @PostMapping("/withProcedure")
+@PostMapping("/withProcedure")
     public ResponseEntity<String> insertWithProcedure(@RequestBody @Valid DentistaDTO dentistaDTO) {
         dentistaService.insertWithProcedure(dentistaDTO);
         return ResponseEntity.ok("Dentista inserido com sucesso.");
-    }
 }
+
+
+@PutMapping("/withProcedure")
+public ResponseEntity<String> updateWithProcedure(@RequestBody @Valid DentistaDTO dentistaDTO) {
+    dentistaService.updateWithProcedure(dentistaDTO);
+    return ResponseEntity.ok("Dentista atualizado com sucesso.");
+}
+
+
+@DeleteMapping("/withProcedure/{idDentista}")
+public ResponseEntity<String> deleteWithProcedure(@PathVariable Long idDentista) {
+    dentistaService.deleteWithProcedure(idDentista);
+    return ResponseEntity.ok("Dentista deletado com sucesso.");
+}
+
 
 
 ------------------------------------------------------------------------------------
@@ -97,7 +113,6 @@ public class DentistaDTO {
     private String emailDentista;
     private Long idEspecialidade;
 
-    // Getters e Setters
 }
 
 ------------------------------------------------------------------------------------
