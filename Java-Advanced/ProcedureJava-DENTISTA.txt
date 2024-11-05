@@ -1,0 +1,115 @@
+REPOSITORY:
+
+@Repository
+public interface DentistaRepository extends JpaRepository<Dentista, Long> {
+
+    @Procedure(name = "CRUD_DENTISTA")
+    void CRUD_DENTISTA(
+        @Param("v_operacao") String operacao,
+        @Param("v_id_dentista") Long idDentista,
+        @Param("v_nome_dentista") String nomeDentista,
+        @Param("v_senha_dentista") String senhaDentista,
+        @Param("v_cro") String cro,
+        @Param("v_telefone_dentista") String telefoneDentista,
+        @Param("v_email_dentista") String emailDentista,
+        @Param("v_id_especialidade") Long idEspecialidade
+    );
+}
+
+
+
+------------------------------------------------------------------------------------
+SERVICE:
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+public class DentistaService {
+
+    private final DentistaRepository dentistaRepository;
+
+    public DentistaService(DentistaRepository dentistaRepository) {
+        this.dentistaRepository = dentistaRepository;
+    }
+
+    @Transactional
+    public void insertWithProcedure(DentistaDTO dentistaDTO) {
+        dentistaRepository.CRUD_DENTISTA(
+            "INSERT",
+            dentistaDTO.getIdDentista(),
+            dentistaDTO.getNomeDentista(),
+            dentistaDTO.getSenhaDentista(),
+            dentistaDTO.getCro(),
+            dentistaDTO.getTelefoneDentista(),
+            dentistaDTO.getEmailDentista(),
+            dentistaDTO.getIdEspecialidade()
+        );
+    }
+}
+
+
+
+------------------------------------------------------------------------------------
+CONTROLLER:
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+
+@RestController
+@RequestMapping("/dentistas")
+public class DentistaController {
+
+    private final DentistaService dentistaService;
+
+    public DentistaController(DentistaService dentistaService) {
+        this.dentistaService = dentistaService;
+    }
+
+    @PostMapping("/withProcedure")
+    public ResponseEntity<String> insertWithProcedure(@RequestBody @Valid DentistaDTO dentistaDTO) {
+        dentistaService.insertWithProcedure(dentistaDTO);
+        return ResponseEntity.ok("Dentista inserido com sucesso.");
+    }
+}
+
+
+------------------------------------------------------------------------------------
+DTO:
+
+import javax.validation.constraints.NotNull;
+
+public class DentistaDTO {
+    private Long idDentista;
+
+    @NotNull
+    private String nomeDentista;
+
+    @NotNull
+    private String senhaDentista;
+
+    @NotNull
+    private String cro;
+
+    private String telefoneDentista;
+    private String emailDentista;
+    private Long idEspecialidade;
+
+    // Getters e Setters
+}
+
+------------------------------------------------------------------------------------
+POSTMAN
+http://localhost:8080/dentistas/withProcedure
+
+{
+    "idDentista": 1,
+    "nomeDentista": "Dr. Carlos Souza",
+    "senhaDentista": "senha123",
+    "cro": "123456SP",
+    "telefoneDentista": "99999-9999",
+    "emailDentista": "carlos.souza@example.com",
+    "idEspecialidade": 2
+}
