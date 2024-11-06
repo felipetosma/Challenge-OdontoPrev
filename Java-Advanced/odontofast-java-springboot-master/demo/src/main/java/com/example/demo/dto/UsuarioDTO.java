@@ -1,19 +1,13 @@
-package com.example.demo.entity;
+package com.example.demo.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "c_op_usuario")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@NoArgsConstructor
+public class UsuarioDTO {
     private Long idUsuario;
     private String nomeUsuario;
     private String senhaUsuario;
