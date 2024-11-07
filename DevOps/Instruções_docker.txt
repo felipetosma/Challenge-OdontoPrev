@@ -1,0 +1,85 @@
+Para te ajudar a preparar e estruturar esse projeto, vou detalhar um passo a passo, com alguns pontos chave e boas práticas para cobrir todos os requisitos e aspectos de avaliação:
+
+1. Criação das Máquinas Virtuais e Configuração Inicial
+Escolha um provedor de IaaS (como AWS, Google Cloud, Azure ou DigitalOcean).
+Crie uma VM com uma configuração mínima adequada para rodar contêineres Docker (CPU e memória suficientes, dependendo da aplicação).
+Configure um usuário sem privilégios administrativos para rodar o aplicativo de maneira segura.
+2. Instalação do Docker
+Instale o Docker seguindo as instruções para o sistema operacional escolhido na VM (em geral, Linux é preferido por questões de performance e compatibilidade).
+Configure o Docker para rodar em background: Após instalar o Docker, ative e habilite o serviço do Docker para inicializar automaticamente:
+bash
+Copiar código
+sudo systemctl enable docker
+sudo systemctl start docker
+3. Desenvolvimento do Dockerfile
+Escolha uma imagem base leve (como Alpine Linux ou slim), garantindo melhor desempenho e menos uso de recursos.
+
+Especifique o usuário não administrativo e defina permissões apropriadas:
+
+dockerfile
+# Exemplo de Dockerfile
+FROM python:3.9-slim
+
+# Crie um usuário não root
+RUN adduser --disabled-password appuser
+USER appuser
+
+WORKDIR /app
+COPY . /app
+
+# Instalação de dependências (exemplo para Python)
+RUN pip install -r requirements.txt
+
+# Executa o aplicativo
+CMD ["python", "app.py"]
+Defina um diretório padrão para o projeto (/app neste exemplo), facilitando a organização e manutenibilidade do código.
+
+4. Configuração do Docker Compose
+Crie o arquivo docker-compose.yml para definir o ambiente:
+
+yaml
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"  # Mapeia a porta da aplicação
+    restart: always
+    user: appuser
+    volumes:
+      - ./app:/app
+O user: appuser define o usuário não administrativo, e o volumes permite que o código seja atualizado sem reconstruir a imagem.
+
+5. Organização do Repositório e README.md
+No GitHub, crie um repositório contendo o código-fonte da aplicação, Dockerfile, docker-compose.yml e README.md.
+O arquivo README.md deve incluir instruções claras:
+Passo a passo de instalação e configuração do Docker.
+Como rodar o docker-compose up -d para iniciar a aplicação em background.
+Como testar a aplicação e qualquer outro detalhe relevante.
+Instruções para persistência de dados, se aplicável.
+6. Persistência de Dados
+Para aplicações que necessitam de persistência, adicione um serviço de banco de dados ao docker-compose.yml. Exemplo com PostgreSQL:
+
+yaml
+db:
+  image: postgres:alpine
+  environment:
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: password
+    POSTGRES_DB: mydatabase
+  volumes:
+    - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
+7. Documentação e Estruturação do Projeto
+Organização do código em diretórios bem definidos (ex.: src/, config/).
+Comentário no Dockerfile e no código para explicitar o que cada comando faz.
+Especificação de variáveis de ambiente no Docker Compose para facilitar customizações e manutenções futuras.
+8. Gravação do Vídeo
+Para o vídeo:
+
+Demonstre a instalação do Docker e configuração inicial.
+Mostre a execução do docker-compose up e explique como o aplicativo sobe em background.
+Apresente a persistência de dados (se aplicável).
+Realize um teste da aplicação para mostrar o funcionamento.
+Com esses passos bem organizados, seu projeto cobrirá todos os requisitos necessários para uma boa avaliação e permitirá o deployment de sua aplicação de forma eficiente e segura.
