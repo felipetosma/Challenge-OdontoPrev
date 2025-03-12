@@ -19,18 +19,4 @@ public class DentistaController {
         dentistaService.insertWithProcedure(dentistaDTO);
         return ResponseEntity.ok("Dentista inserido com sucesso.");
     }
-
-    @PutMapping("/withProcedure")
-    public ResponseEntity<String> updateWithProcedure(@RequestBody @Valid DentistaDTO dentistaDTO) {
-        dentistaService.updateWithProcedure(dentistaDTO);
-        return ResponseEntity.ok("Dentista atualizado com sucesso.");
-    }
-
-    @DeleteMapping("/withProcedure")
-    public ResponseEntity<String> deleteWithProcedure(@RequestBody @Valid DentistaDTO dentistaDTO) {
-        dentistaService.deleteWithProcedure(dentistaDTO);
-        return ResponseEntity.ok("Dentista deletado com sucesso.");
-    }
-
-
 }
