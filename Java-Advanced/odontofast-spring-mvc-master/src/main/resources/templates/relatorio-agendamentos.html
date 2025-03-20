@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Relatório de Agendamentos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        td {
+            font-size: 14px;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            th, td {
+                min-width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Relatório de Agendamentos por Plano</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Plano</th>
+        <th>Tipo de Plano</th>
+        <th>Total Agendamentos</th>
+        <th>Dentista</th>
+        <th>Categoria Volume</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="agendamento : ${agendamentos}">
+        <td th:text="${agendamento.nomePlano}"></td>
+        <td th:text="${agendamento.tipoPlano}"></td>
+        <td th:text="${agendamento.totalAgendamentos}"></td>
+        <td th:text="${agendamento.nomeDentista}"></td>
+        <td th:text="${agendamento.categoriaVolume}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

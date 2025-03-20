@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head"></head>
+
+<body>
+
+<div class="dashboard">
+    <div th:replace="~{fragments/menu-sidebar :: menu-sidebar(activePage='usuarios')}"></div>
+
+    <div class="main-content">
+        <h1 class="fs-2 mb-4">Pacientes</h1>
+
+        <!-- Formulário para INSERT -->
+        <div class="card p-4 form-section">
+            <h2>Inserir Paciente</h2>
+            <label>ID Paciente: <input type="number" id="idUsuarioInsert"></label>
+            <label>Nome: <input type="text" id="nomeUsuarioInsert"></label>
+            <label>Senha: <input type="password" id="senhaUsuarioInsert"></label>
+            <label>Email: <input type="email" id="emailUsuarioInsert"></label>
+            <label>Nr Carteira: <input type="text" id="nrCarteiraInsert"></label>
+            <label>Telefone: <input type="text" id="telefoneUsuarioInsert"></label>
+            <button class="btn btn-primary" onclick="inserirUsuario()">Inserir</button>
+        </div>
+
+        <!-- Formulário para UPDATE -->
+        <div class="card p-4 form-section">
+            <h2>Atualizar Paciente</h2>
+            <label>ID Paciente: <input type="number" id="idUsuarioUpdate"></label>
+            <label>Nome: <input type="text" id="nomeUsuarioUpdate"></label>
+            <label>Senha: <input type="password" id="senhaUsuarioUpdate"></label>
+            <label>Email: <input type="email" id="emailUsuarioUpdate"></label>
+            <label>Nr Carteira: <input type="text" id="nrCarteiraUpdate"></label>
+            <label>Telefone: <input type="text" id="telefoneUsuarioUpdate"></label>
+            <button class="btn btn-warning text-white" onclick="atualizarUsuario()">Atualizar</button>
+        </div>
+
+        <!-- Formulário para DELETE -->
+        <div class="card p-4 form-section">
+            <h2>Deletar Paciente</h2>
+            <label>ID Paciente: <input type="number" id="idUsuarioDelete"></label>
+            <button class="btn btn-danger" onclick="deletarUsuario()">Deletar</button>
+        </div>
+
+        <!-- Área de Resultados -->
+        <div id="resultados">
+            <h2>Resultados</h2>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    function adicionarResultado(mensagem, isError = false) {
+        const div = document.createElement('div');
+        div.textContent = mensagem;
+        div.className = isError ? 'error' : 'success';
+        document.getElementById('resultados').prepend(div);
+    }
+
+    function inserirUsuario() {
+        const data = {
+            idUsuario: $('#idUsuarioInsert').val(),
+            nomeUsuario: $('#nomeUsuarioInsert').val(),
+            senhaUsuario: $('#senhaUsuarioInsert').val(),
+            emailUsuario: $('#emailUsuarioInsert').val(),
+            nrCarteira: $('#nrCarteiraInsert').val(),
+            telefoneUsuario: $('#telefoneUsuarioInsert').val()
+        };
+
+        $.ajax({
+            url: '/api/usuarios/inserir',
+            type: 'POST',
+            data: data,
+            success: function(response) {
+                adicionarResultado(response);
+            },
+            error: function(xhr) {
+                adicionarResultado(xhr.responseText, true);
+            }
+        });
+    }
+
+    function atualizarUsuario() {
+        const data = {
+            idUsuario: $('#idUsuarioUpdate').val(),
+            nomeUsuario: $('#nomeUsuarioUpdate').val(),
+            senhaUsuario: $('#senhaUsuarioUpdate').val(),
+            emailUsuario: $('#emailUsuarioUpdate').val(),
+            nrCarteira: $('#nrCarteiraUpdate').val(),
+            telefoneUsuario: $('#telefoneUsuarioUpdate').val()
+        };
+
+        $.ajax({
+            url: '/api/usuarios/atualizar',
+            type: 'POST',
+            data: data,
+            success: function(response) {
+                adicionarResultado(response);
+            },
+            error: function(xhr) {
+                adicionarResultado(xhr.responseText, true);
+            }
+        });
+    }
+
+    function deletarUsuario() {
+        const data = {
+            idUsuario: $('#idUsuarioDelete').val()
+        };
+
+        $.ajax({
+            url: '/api/usuarios/deletar',
+            type: 'POST',
+            data: data,
+            success: function(response) {
+                adicionarResultado(response);
+            },
+            error: function(xhr) {
+                adicionarResultado(xhr.responseText, true);
+            }
+        });
+    }
+</script>
+</body>
+</html>

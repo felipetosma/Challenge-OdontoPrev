@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.4.3</version>
+		<relativePath/>
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>odontofast</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>odontofast</name>
+	<description>MVC Odontofast Project</description>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+	<properties>
+		<java.version>21</java.version>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+		<!-- Configuração para caracteres especiais -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.resources.encoding>UTF-8</maven.resources.encoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc11</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!-- Dependência do banco de dados sql server -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>11.2.3.jre11</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Plugin de recursos do Maven -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<!-- Define a codificação UTF-8 para todos os recursos do projeto -->
+					<!-- Isso garante que caracteres especiais sejam tratados corretamente durante o build -->
+					<encoding>UTF-8</encoding>
+
+					<!-- Define quais extensões de arquivos não devem passar pelo processo de filtragem do Maven -->
+					<!-- No caso, arquivos .properties não serão filtrados, evitando problemas com caracteres especiais -->
+					<nonFilteredFileExtensions>
+						<nonFilteredFileExtension>properties</nonFilteredFileExtension>
+					</nonFilteredFileExtensions>
+				</configuration>
+			</plugin>
+
+			<!-- Plugin do Spring Boot para Maven -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- Plugin essencial para aplicações Spring Boot -->
+				<!-- Ele cria um JAR executável que inclui todas as dependências, o código compilado -->
+				<!-- e um servidor Tomcat embutido para executar a aplicação -->
+				<!-- Também configura o ponto de entrada da aplicação (main class) automaticamente -->
+			</plugin>
+
+			<!-- Plugin do Azure para Maven - permite implantação no Azure App Service -->
+			<plugin>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<version>2.7.0</version>
+				<configuration>
+					<!-- Versão do esquema de configuração do plugin -->
+					<schemaVersion>v2</schemaVersion>
+
+					<!-- Grupo de recursos do Azure onde a aplicação será implantada -->
+					<resourceGroup>rg-webapp-odontofast</resourceGroup>
+
+					<!-- Nome da aplicação web no Azure -->
+					<!-- Este será o nome do site: webapp-odontofast.azurewebsites.net -->
+					<appName>webapp-odontofast</appName>
+
+					<!-- Região do Azure onde a aplicação será hospedada -->
+					<region>eastus2</region>
+
+					<!-- Nível de preço do plano de serviço -->
+					<pricingTier>F1</pricingTier>
+
+					<!-- Configuração do ambiente de execução -->
+					<runtime>
+						<!-- Sistema operacional do servidor Azure -->
+						<os>Windows</os>
+
+						<!-- Versão do Java a ser usada pelo Azure -->
+						<javaVersion>Java 21</javaVersion>
+
+						<!-- Tipo de contêiner web -->
+						<!-- Java SE indica que estamos usando um JAR executável com servidor embutido -->
+						<!-- ao invés de uma implantação WAR em um servidor Tomcat externo -->
+						<webContainer>Java SE</webContainer>
+					</runtime>
+
+					<!-- Configurações da aplicação (variáveis de ambiente) -->
+					<!-- Estas configurações serão injetadas no ambiente do Azure -->
+					<appSettings>
+						<!-- URL de conexão com o banco de dados SQL Server no Azure -->
+						<!-- Inclui servidor, banco de dados e configurações de segurança -->
+						<property>
+							<name>SPRING_DATASOURCE_URL</name>
+							<value>jdbc:sqlserver://serversql-odontofast.database.windows.net:1433;database=database-odontofast;encrypt=true;trustServerCertificate=false</value>
+						</property>
+
+						<!-- Nome de usuário para conexão com o banco de dados -->
+						<!-- O formato "usuário@servidor" é específico do SQL Server do Azure -->
+						<property>
+							<name>SPRING_DATASOURCE_USERNAME</name>
+							<value>sqladmin@serversql-odontofast</value>
+						</property>
+
+						<!-- Senha para conexão com o banco de dados -->
+						<!-- Em ambientes de produção, considere usar o Key Vault do Azure -->
+						<property>
+							<name>SPRING_DATASOURCE_PASSWORD</name>
+							<value>Fiap@2ds2025</value>
+						</property>
+
+						<!-- Classe do driver JDBC para o SQL Server -->
+						<!-- Esta configuração garante que o Spring Boot use o driver correto -->
+						<property>
+							<name>SPRING_DATASOURCE_DRIVER_CLASS_NAME</name>
+							<value>com.microsoft.sqlserver.jdbc.SQLServerDriver</value>
+						</property>
+					</appSettings>
+
+					<!-- Configuração dos recursos a serem implantados -->
+					<deployment>
+						<resources>
+							<!-- Especifica quais arquivos serão enviados para o Azure -->
+							<resource>
+								<!-- Diretório onde os artefatos de build estão localizados -->
+								<directory>${project.basedir}/target</directory>
+
+								<!-- Padrão de arquivos a serem incluídos no deploy -->
+								<!-- Neste caso, todos os arquivos JAR gerados pela build -->
+								<includes>
+									<include>*.jar</include>
+								</includes>
+							</resource>
+						</resources>
+					</deployment>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

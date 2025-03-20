@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head"></head>
+
+<body>
+<div class="dashboard">
+    <div th:replace="~{fragments/menu-sidebar :: menu-sidebar(activePage='perfil')}"></div>
+    <div class="main-content">
+        <!-- Toast dinâmico -->
+        <div th:replace="~{fragments/toast :: toast}"></div>
+        <div>
+            <div class="card p-4 mb-4">
+                <h2 class="titulo">Atualizar Perfil</h2>
+                <form th:action="@{/dentista/perfil/atualizar}" method="post">
+                    <input type="hidden" name="idDentista" th:value="${dentista.idDentista}" />
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name" name="nomeDentista" th:value="${dentista.nomeDentista}" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="cro" class="form-label">CRO</label>
+                        <input type="text" class="form-control" id="cro" name="cro" th:value="${dentista.cro}" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="emailDentista" th:value="${dentista.emailDentista}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Telefone</label>
+                        <input type="text" class="form-control" name="telefoneDentista" th:value="${dentista.telefoneDentista}" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </form>
+            </div>
+            <div class="card p-4">
+                <h2 class="titulo">Alterar Senha</h2>
+                <form th:action="@{/dentista/perfil/atualizarSenha}" method="post">
+                    <div class="mb-3">
+                        <label for="current-password" class="form-label">Senha Atual</label>
+                        <input type="password" class="form-control" id="current-password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="new-password" class="form-label">Nova Senha</label>
+                        <input type="password" class="form-control" id="new-password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">Confirmar Nova Senha</label>
+                        <input type="password" class="form-control" id="confirm-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Atualizar Senha</button>
+                </form>
+            </div>
+
+
+        </div>
+        <div th:replace="fragments/footer"></div>
+    </div>
+</div>
+
+</body>
+</html>

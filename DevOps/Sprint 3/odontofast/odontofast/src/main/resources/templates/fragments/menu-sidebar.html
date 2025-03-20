@@ -1,0 +1,33 @@
+<div class="sidebar" th:fragment="menu-sidebar(activePage)" id="sidebar">
+  <div class="sidebar-header">
+    <button id="toggleSidebar" class="btn btn-toggle">
+      <i class="bi bi-list"></i>
+    </button>
+      <!-- <h2 style="text-align: center;" class="sidebar-title">Odontofast.</h2> -->
+      <div class="logo" >
+          <img id="logo-img" th:src="@{/assets/brand/logotipo.svg}" alt="Logo da Odontofast" class="sidebar-logo">
+      </div>
+  </div>
+  <nav class="nav flex-column navbarmenu">
+    <a class="nav-link" th:classappend="${activePage == 'home' ? 'active' : ''}" href="/dentista/home">
+        <i class="bi bi-house-door"></i>
+        <span class="nav-text">Painel Principal</span>
+    </a>
+    <a class="nav-link" th:classappend="${activePage == 'perfil' ? 'active' : ''}" href="/dentista/perfil">
+        <i class="bi bi-person"></i>
+        <span class="nav-text">Perfil</span>
+    </a>
+    <a class="nav-link" th:classappend="${activePage == 'agendamentos' ? 'active' : ''}" href="/dentista/agendamentos">
+        <i class="bi bi-calendar"></i>
+        <span class="nav-text">Agendamentos</span>
+    </a>
+      <a class="nav-link" href="#">
+        <i class="bi bi-bar-chart"></i>
+        <span class="nav-text">Relatórios</span>
+    </a>
+      <a class="nav-link" href="#">
+          <i class="bi bi-people"></i>
+          <span class="nav-text">Pacientes</span>
+      </a>
+  </nav>
+</div>

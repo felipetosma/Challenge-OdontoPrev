@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head"></head>
+
+<body>
+
+<div class="dashboard">
+    <div th:replace="~{fragments/menu-sidebar :: menu-sidebar(activePage='agendamentos')}"></div>
+    <div class="main-content">
+        <div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="fs-2">Agenda - 15 de Março de 2025</h1>
+                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addAppointmentModal">+ Novo Agendamento</button>
+            </div>
+            <div class="mb-4">
+                <button class="btn btn-outline-primary btn-filter">Confirmadas</button>
+                <button class="btn btn-outline-warning btn-filter">Pendentes</button>
+                <button class="btn btn-outline-danger btn-filter">Canceladas</button>
+            </div>
+            <div class="card p-4">
+                <h2 class="titulo">Agendamentos do Dia</h2>
+                <div class="appointment-list">
+                    <div class="appointment-item d-flex justify-content-between">
+                        <span class="text-body-secondary">09:00 - Maria Silva - Limpeza</span>
+                        <span class="badge bg-success">Confirmada</span>
+                    </div>
+                    <div class="appointment-item d-flex justify-content-between">
+                        <span class="text-body-secondary">10:30 - João Pereira - Extração</span>
+                        <span class="badge bg-warning">Pendente</span>
+                    </div>
+                    <div class="appointment-item d-flex justify-content-between">
+                        <span class="text-body-secondary">14:00 - Ana Costa - Clareamento</span>
+                        <span class="badge bg-success">Confirmada</span>
+                    </div>
+                    <div class="appointment-item d-flex justify-content-between">
+                        <span class="text-body-secondary">16:00 - Pedro Almeida - Consulta</span>
+                        <span class="badge bg-danger">Cancelada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer th:replace="fragments/footer"></footer>
+</div>
+</div>
+
+<!-- Modal para Novo Agendamento -->
+<div class="modal fade" id="addAppointmentModal" tabindex="-1" aria-labelledby="addAppointmentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title titulo" id="addAppointmentModalLabel">Novo Agendamento</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="mb-3">
+                      <label for="patient-name" class="form-label">Nome do Paciente</label>
+                      <input type="text" class="form-control" id="patient-name" placeholder="Ex.: Maria Silva">
+                  </div>
+                  <div class="mb-3">
+                      <label for="appointment-time" class="form-label">Horário</label>
+                      <input type="time" class="form-control" id="appointment-time">
+                  </div>
+                  <div class="mb-3">
+                      <label for="procedure" class="form-label">Procedimento</label>
+                      <select class="form-select" id="procedure">
+                          <option>Limpeza</option>
+                          <option>Extração</option>
+                          <option>Clareamento</option>
+                          <option>Consulta</option>
+                      </select>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Adicionar</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>

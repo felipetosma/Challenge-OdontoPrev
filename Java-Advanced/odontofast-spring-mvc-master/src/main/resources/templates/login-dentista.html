@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head"></head>
+
+<body>
+<div class="login-container">
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>Login</h1>
+            <p th:if="${erro}" class="error" th:text="${erro}"></p>
+            <form th:action="@{/dentista/login}" method="post">
+                <div class="mb-3">
+                    <label for="cro" class="form-label">CRO</label>
+                    <input type="text" class="form-control" id="cro" placeholder="Digite seu e-mail" name="cro" required />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" placeholder="Digite sua senha" name="senha" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            <div class="text-link">
+                <p>Não tem uma conta? <a href="/dentista/cadastro">Cadastre-se</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Reset básico para consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Container principal para centralizar e estilizar o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título principal */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo das seções de relatórios */
+.report-section {
+    margin-bottom: 40px;
+}
+
+.report-section h2 {
+    color: #5FCEE7;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #5FCEE7;
+    padding-bottom: 5px;
+}
+
+/* Estilo das tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        min-width: 100px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .report-section h2 {
+        font-size: 1.2rem;
+    }
+}

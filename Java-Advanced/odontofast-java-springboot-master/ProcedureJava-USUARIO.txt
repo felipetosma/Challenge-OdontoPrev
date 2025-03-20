@@ -1,0 +1,117 @@
+REPOSITORY:
+
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+
+    @Procedure(name = "CRUD_USUARIO")
+    void CRUD_USUARIO(
+        @Param("v_operacao") String operacao, 
+        @Param("v_id_usuario") Long idUsuario, 
+        @Param("v_nome_usuario") String nomeUsuario, 
+        @Param("v_senha_usuario") String senhaUsuario, 
+        @Param("v_email_usuario") String emailUsuario, 
+        @Param("v_nr_carteira") String nrCarteira, 
+        @Param("v_telefone_usuario") Long telefoneUsuario
+    );
+}
+
+------------------------------------------------------------------------------------
+SERVICE:
+
+@Transactional
+    public void insertWithProcedure(UsuarioDTO usuarioDTO) {
+        usuarioRepository.CRUD_USUARIO(
+            "INSERT", 
+            usuarioDTO.getIdUsuario(), 
+            usuarioDTO.getNomeUsuario(), 
+            usuarioDTO.getSenhaUsuario(), 
+            usuarioDTO.getEmailUsuario(), 
+            usuarioDTO.getNrCarteira(), 
+            usuarioDTO.getTelefoneUsuario()
+        );
+}
+
+@Transactional
+public void updateWithProcedure(UsuarioDTO usuarioDTO) {
+    usuarioRepository.CRUD_USUARIO(
+        "UPDATE",
+        usuarioDTO.getIdUsuario(),
+        usuarioDTO.getNomeUsuario(),
+        usuarioDTO.getSenhaUsuario(),
+        usuarioDTO.getEmailUsuario(),
+        usuarioDTO.getNrCarteira(),
+        usuarioDTO.getTelefoneUsuario()
+    );
+}
+
+@Transactional
+public void deleteWithProcedure(Long idUsuario) {
+    usuarioRepository.CRUD_USUARIO(
+        "DELETE",
+        idUsuario,
+        null,
+        null,
+        null,
+        null,
+        null
+    );
+}
+
+
+------------------------------------------------------------------------------------
+CONTROLLER:
+
+@PostMapping("/withProcedure")
+    public ResponseEntity<String> insertWithProcedure(@RequestBody @Valid UsuarioDTO usuarioDTO) {
+        usuarioService.insertWithProcedure(usuarioDTO);
+        return ResponseEntity.ok("Usuário inserido com sucesso.");
+}
+
+@PutMapping("/withProcedure")
+public ResponseEntity<String> updateWithProcedure(@RequestBody @Valid UsuarioDTO usuarioDTO) {
+    usuarioService.updateWithProcedure(usuarioDTO);
+    return ResponseEntity.ok("Usuário atualizado com sucesso.");
+}
+	
+@DeleteMapping("/withProcedure/{idUsuario}")
+public ResponseEntity<String> deleteWithProcedure(@PathVariable Long idUsuario) {
+    usuarioService.deleteWithProcedure(idUsuario);
+    return ResponseEntity.ok("Usuário deletado com sucesso.");
+}
+
+
+
+------------------------------------------------------------------------------------
+DTO: 
+
+import javax.validation.constraints.NotNull;
+
+public class UsuarioDTO {
+    private Long idUsuario;
+
+    @NotNull
+    private String nomeUsuario;
+
+    @NotNull
+    private String senhaUsuario;
+
+    @NotNull
+    private String emailUsuario;
+
+    private String nrCarteira;
+    private Long telefoneUsuario;
+
+}
+
+------------------------------------------------------------------------------------
+POSTMAN:
+http://localhost:8080/usuarios/withProcedure
+
+{
+    "idUsuario": 1,
+    "nomeUsuario": "João Silva",
+    "senhaUsuario": "senha123",
+    "emailUsuario": "joao.silva@example.com",
+    "nrCarteira": "12345",
+    "telefoneUsuario": "99999-9999"
+}

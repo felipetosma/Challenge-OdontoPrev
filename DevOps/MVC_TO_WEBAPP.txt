@@ -1,0 +1,115 @@
+1. Preparando sua aplicação Spring MVC para o Azure
+Primeiro, precisamos configurar o application.properties para conectar ao SQL Server do Azure:
+
+--------------------------------------------------------------------------
+# Configuração do SQL Server no Azure
+spring.datasource.url=jdbc:sqlserver://serversql-odontofast.database.windows.net:1433;database=database-odontofast;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+spring.datasource.username=sqladmin@serversql-odontofast
+spring.datasource.password=Fiap@2ds2025
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+# Configuração JPA/Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServer2012Dialect
+spring.jpa.show-sql=true
+
+--------------------------------------------------------------------------
+
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <scope>runtime</scope>
+</dependency>
+
+--------------------------------------------------------------------------
+2. Implantando no Azure Web App
+Passo 1: Empacotar sua aplicação
+Compile sua aplicação como um arquivo JAR:
+
+mvn clean package
+
+--------------------------------------------------------------------------
+Passo 2: Criar recursos no Azure
+
+Crie um grupo de recursos
+Crie o servidor SQL Server e o banco de dados
+Crie o App Service Plan
+Crie o Web App
+
+Passo 3: Configurar o Web App para Java
+Você pode fazer isso através do Portal Azure, Azure CLI ou usando o plugin Maven para Azure:
+Usando o Portal Azure:
+
+Acesse o Portal Azure e navegue até seu Web App
+Vá para "Configurações" → "Configurações gerais"
+Defina:
+
+Stack: Java
+Versão do Java: 11 ou a versão que sua aplicação usa
+Contêiner Web: Apache Tomcat ou Java SE (para aplicações Spring Boot)
+
+--------------------------------------------------------------------------
+#Adicione o plugin do Azure no seu pom.xml:
+<plugin>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure-webapp-maven-plugin</artifactId>
+    <version>2.7.0</version>
+    <configuration>
+        <schemaVersion>v2</schemaVersion>
+        <resourceGroup>{seu-grupo-de-recursos}</resourceGroup>
+        <appName>{nome-do-seu-webapp}</appName>
+        <region>{regiao-azure}</region>
+        <pricingTier>P1v2</pricingTier>
+        <runtime>
+            <os>Linux</os>
+            <javaVersion>Java 11</javaVersion>
+            <webContainer>Java SE</webContainer>
+        </runtime>
+        <deployment>
+            <resources>
+                <resource>
+                    <directory>${project.basedir}/target</directory>
+                    <includes>
+                        <include>*.jar</include>
+                    </includes>
+                </resource>
+            </resources>
+        </deployment>
+    </configuration>
+</plugin>
+
+--------------------------------------------------------------------------
+
+#Depois execute:
+mvn azure-webapp:deploy
+
+
+--------------------------------------------------------------------------
+3. Configurando variáveis de ambiente no Azure Web App
+É uma boa prática não colocar senhas e configurações sensíveis diretamente no arquivo application.properties. Em vez disso:
+
+Acesse seu Web App no Portal Azure
+Vá para "Configurações" → "Configurações do aplicativo"
+Adicione as seguintes configurações:
+
+SPRING_DATASOURCE_URL = jdbc:sqlserver://{seu-servidor}.database.windows.net:1433;database={seu-banco};encrypt=true;trustServerCertificate=false
+SPRING_DATASOURCE_USERNAME = {seu-usuário}
+SPRING_DATASOURCE_PASSWORD = {sua-senha}
+
+--------------------------------------------------------------------------
+
+4. Habilitar acesso ao banco de dados
+
+No Portal Azure, acesse seu servidor SQL
+Vá para "Segurança" → "Firewalls e redes virtuais"
+Ative "Permitir acesso a serviços do Azure"
+Salve as alterações
+
+5. Testando a conexão
+Para garantir que sua aplicação está se conectando corretamente ao banco de dados, verifique os logs do aplicativo no portal do Azure:
+
+Acesse seu Web App
+Vá para "Monitoramento" → "Log stream"
+Observe os logs durante a inicialização da aplicação
+
+Agora sua aplicação Spring MVC com Thymeleaf deve estar rodando no Azure Web App e conectada ao SQL Server do Azure. Lembre-se de substituir todos os valores entre chaves {} pelos valores específicos do seu ambiente.

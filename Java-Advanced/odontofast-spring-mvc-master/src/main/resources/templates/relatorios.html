@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head"></head>
+
+<body>
+
+    <div class="dashboard">
+        <div th:replace="~{fragments/menu-sidebar :: menu-sidebar(activePage='relatorios')}"></div>
+        <div class="main-content">
+            <h1 class="fs-2 mb-4">Relatórios - Odontofast</h1>
+
+            <!-- Abas de navegação -->
+            <div class="tabs">
+                <button class="tab active" onclick="openTab('tratamentos')">Tratamentos por Dentista</button>
+                <button class="tab" onclick="openTab('agendamentos')">Agendamentos por Plano</button>
+            </div>
+
+            <!-- Conteúdo da aba de Tratamentos -->
+            <div id="tratamentos" class="card p-4 tab-content active">
+                <h2 class="titulo">Relatório de Tratamentos por Dentista</h2>
+
+                <div class="w-100 overflow-auto">
+                    <table id="tabela-tratamentos">
+                    <thead>
+                    <tr>
+                        <th>Dentista</th>
+                        <th>Especialidade</th>
+                        <th>Plano</th>
+                        <th>Status</th>
+                        <th>Total Tratamentos</th>
+                        <th>Média Dias</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Thymeleaf tratamentos -->
+                    <tr th:if="${tratamentos == null || tratamentos.isEmpty()}">
+                        <td colspan="6" class="no-data">Nenhum dado de tratamento encontrado</td>
+                    </tr>
+                    <tr th:if="${tratamentos != null}" th:each="tratamento : ${tratamentos}">
+                        <td th:text="${tratamento.nomeDentista}">Nome Dentista</td>
+                        <td th:text="${tratamento.tipoEspecialidade != null ? tratamento.tipoEspecialidade : 'Não especificada'}">Especialidade</td>
+                        <td th:text="${tratamento.nomePlano}">Nome Plano</td>
+                        <td th:class="${tratamento.statusEspecialidade == 'Especialidade válida' ? 'status-valid' :
+                                        (tratamento.statusEspecialidade == 'Especialidade não cadastrada' ? 'status-not-registered' : 'status-invalid')}"
+                            th:text="${tratamento.statusEspecialidade}">Status</td>
+                        <td th:text="${tratamento.totalTratamentos}">Total</td>
+                        <td th:text="${#numbers.formatDecimal(tratamento.mediaDiasTratamento, 1, 1)}">Média</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Conteúdo da aba de Agendamentos -->
+
+            <div id="agendamentos" class="card p-4 tab-content">
+                <h2 class="titulo">Relatório de Agendamentos por Plano</h2>
+
+                <div class="w-100 overflow-auto">
+                    <table id="tabela-agendamentos">
+                    <thead>
+                    <tr>
+                        <th>Plano</th>
+                        <th>Tipo de Plano</th>
+                        <th>Dentista</th>
+                        <th>Total Agendamentos</th>
+                        <th>Categoria</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Thymeleaf agendamentos -->
+                    <tr th:if="${agendamentos == null || agendamentos.isEmpty()}">
+                        <td colspan="5" class="no-data">Nenhum dado de agendamento encontrado</td>
+                    </tr>
+                    <tr th:if="${agendamentos != null}" th:each="agendamento : ${agendamentos}">
+                        <td th:text="${agendamento.nomePlano}">Nome Plano</td>
+                        <td th:text="${agendamento.tipoPlano}">Tipo Plano</td>
+                        <td th:text="${agendamento.nomeDentista != null ? agendamento.nomeDentista : 'Não atribuído'}">Nome Dentista</td>
+                        <td th:text="${agendamento.totalAgendamentos}">Total</td>
+                        <td>
+                            <span th:class="${agendamento.categoriaVolume == 'Alto Volume' ? 'volume-high' :
+                                            (agendamento.categoriaVolume == 'Volume Médio' ? 'volume-medium' : 'volume-low')}"
+                                  th:text="${agendamento.categoriaVolume}">Categoria</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        // Função para alternar entre as abas
+        function openTab(tabName) {
+            // Esconder todas as abas
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            // Remover a classe active de todas as abas
+            var tabs = document.getElementsByClassName("tab");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+
+            // Mostrar a aba clicada e ativar o botão correspondente
+            document.getElementById(tabName).classList.add("active");
+
+            // Encontrar o botão da aba e ativá-lo
+            var buttons = document.getElementsByClassName("tab");
+            for (var i = 0; i < buttons.length; i++) {
+                if (buttons[i].textContent.toLowerCase().includes(tabName)) {
+                    buttons[i].classList.add("active");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

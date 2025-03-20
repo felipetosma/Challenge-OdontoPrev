@@ -1,0 +1,108 @@
+/* Seções de formulário */
+.form-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.form-section h2 {
+    color: #5FCEE7;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #5FCEE7;
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Labels e Inputs */
+.form-section label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #444;
+    font-size: 1rem;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section input:focus {
+    border-color: #5FCEE7;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 121, 107, 0.3);
+}
+
+
+/* Área de Resultados */
+#resultados {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    max-width: 650px;
+    margin: 0 auto;
+    max-height: 350px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+}
+
+#resultados h2 {
+    color: #1a3c34;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1a3c34;
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+#resultados div {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-section, #resultados {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .form-section h2, #resultados h2 {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .form-section h2, #resultados h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-section label {
+        font-size: 0.9rem;
+    }
+}

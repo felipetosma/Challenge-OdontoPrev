@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head"></head>
+
+<body>
+<div class="auth-container overflow-auto">
+    <!-- Toast dinâmico -->
+    <div th:replace="~{fragments/toast :: toast}"></div>
+    <div class="auth-card">
+        <h1>Cadastro</h1>
+        <!-- Exibe mensagem de erro se o CRO já existir -->
+        <p th:if="${erro}" class="error" th:text="${erro}"></p>
+        <form th:action="@{/dentista/cadastro}" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="name" placeholder="Digite seu nome" name="nomeDentista" required>
+            </div>
+            <div class="mb-3">
+                <label for="cro" class="form-label">CRO</label> 
+                <input type="text" class="form-control" id="cro" placeholder="Digite seu CRO" name="cro" required />
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="phone" placeholder="(xx) xxxxx-xxxx" name="telefoneDentista">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" name="emailDentista" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Especialidade</label>
+                <select class="form-control" name="especialidadeId">
+                    <option value="1">Ortodontia</option>
+                    <option value="2">Endodontia</option>
+                    <option value="3">Periodontia</option>
+                    <option value="4">Implantodontia</option>
+                    <option value="5">Odontopediatria</option>
+                    <option value="6">Buco-Maxilo</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="password" placeholder="Digite sua senha" name="senhaDentista" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+        <div class="text-link">
+            <p>Já tem uma conta? <a href="/dentista/login">Faça login</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

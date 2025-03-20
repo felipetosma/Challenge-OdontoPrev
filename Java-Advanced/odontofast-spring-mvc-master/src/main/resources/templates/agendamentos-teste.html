@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Teste de Agendamentos</title>
+    <link rel="stylesheet" href="/assets/dist/css/usuarios.css" th:href="@{/assets/dist/css/usuarios.css}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Teste Dinâmico de Agendamentos</h1>
+
+<!-- Formulário para INSERT -->
+<div class="form-section">
+    <h2>Inserir Agendamento</h2>
+    <label>Dentista ID: <input type="number" id="dentistaIdInsert"></label>
+    <label>Usuário ID: <input type="number" id="usuarioIdInsert"></label>
+    <label>Data Agendada: <input type="date" id="dataAgendadaInsert"></label>
+    <label>Horário: <input type="text" id="horarioInsert" placeholder="HH:MM"></label>
+    <label>Descrição: <input type="text" id="descricaoInsert"></label>
+    <button onclick="inserirAgendamento()">Inserir</button>
+</div>
+
+<!-- Formulário para UPDATE -->
+<div class="form-section">
+    <h2>Atualizar Agendamento</h2>
+    <label>ID Agendamento: <input type="number" id="idAgendamentoUpdate"></label>
+    <label>Nova Descrição: <input type="text" id="descricaoUpdate"></label>
+    <button onclick="atualizarAgendamento()">Atualizar</button>
+</div>
+
+<!-- Formulário para DELETE -->
+<div class="form-section">
+    <h2>Deletar Agendamento</h2>
+    <label>ID Agendamento: <input type="number" id="idAgendamentoDelete"></label>
+    <button onclick="deletarAgendamento()">Deletar</button>
+</div>
+
+<!-- Área de Resultados -->
+<div id="resultados">
+    <h2>Resultados</h2>
+</div>
+
+<script>
+    function adicionarResultado(mensagem, isError = false) {
+        const div = document.createElement('div');
+        div.textContent = mensagem;
+        div.className = isError ? 'error' : 'success';
+        document.getElementById('resultados').prepend(div);
+    }
+
+    function inserirAgendamento() {
+        const data = {
+            dentistaId: $('#dentistaIdInsert').val(),
+            usuarioId: $('#usuarioIdInsert').val(),
+            dataAgendada: $('#dataAgendadaInsert').val(),
+            horario: $('#horarioInsert').val(),
+            descricao: $('#descricaoInsert').val()
+        };
+        $.post('/api/agendamentos/inserir', data)
+            .done(response => adicionarResultado(response))
+            .fail(error => adicionarResultado(error.responseText, true));
+    }
+
+    function atualizarAgendamento() {
+        const data = {
+            idAgendamento: $('#idAgendamentoUpdate').val(),
+            descricao: $('#descricaoUpdate').val()
+        };
+        $.post('/api/agendamentos/atualizar', data)
+            .done(response => adicionarResultado(response))
+            .fail(error => adicionarResultado(error.responseText, true));
+    }
+
+    function deletarAgendamento() {
+        const data = {
+            idAgendamento: $('#idAgendamentoDelete').val()
+        };
+        $.post('/api/agendamentos/deletar', data)
+            .done(response => adicionarResultado(response))
+            .fail(error => adicionarResultado(error.responseText, true));
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo das abas */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #5FCEE7;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.tab.active {
+    background-color: #5FCEE7;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Estilo das tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #5FCEE7;
+    color: white;
+}
+
+thead, tr {
+    border-radius: 10px !important;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.status-valid {
+    color: green;
+    font-weight: bold;
+}
+
+.status-invalid {
+    color: red;
+    font-weight: bold;
+}
+
+.status-not-registered {
+    color: orange;
+    font-weight: bold;
+}
+
+.volume-high {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.volume-medium {
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.volume-low {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}

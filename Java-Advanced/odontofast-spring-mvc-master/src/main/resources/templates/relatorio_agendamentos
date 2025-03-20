@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Agendamentos</title>
+</head>
+<body>
+    <h1>Relatório de Agendamentos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Agendamento</th>
+                <th>Dentista</th>
+                <th>Paciente</th>
+                <th>Data Agendada</th>
+                <th>Horário Agendado</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="relatorio : ${relatorioAgendamentos}">
+                <tr>
+                    <td th:text="${relatorio.idAgendamento}"></td>
+                    <td th:text="${relatorio.nomeDentista}"></td>
+                    <td th:text="${relatorio.nomePaciente}"></td>
+                    <td th:text="${relatorio.dataAgendada}"></td>
+                    <td th:text="${relatorio.horarioAgendado}"></td>
+                    <td th:text="${relatorio.descricao}"></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+</body>
+</html>
