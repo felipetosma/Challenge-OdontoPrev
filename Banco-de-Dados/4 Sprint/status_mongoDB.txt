@@ -1,0 +1,28 @@
+{
+  "_id": ObjectId("5f8a9b1d2c3e4f5a6b7c8d7a"),
+  "codigo": 1,
+  "tipo": "tratamento",
+  "descricao": "Em andamento",
+  "cor_hex": "#3498db",
+  "icone": "treatment_progress.png",
+  "acoes_permitidas": [
+    "atualizar",
+    "pausar",
+    "concluir"
+  ],
+  "notificacoes_associadas": [
+    {
+      "evento": "atualizacao",
+      "mensagem_template": "Seu tratamento de {tipo_tratamento} foi atualizado",
+      "canais": ["app", "email"]
+    },
+    {
+      "evento": "conclusao",
+      "mensagem_template": "Seu tratamento de {tipo_tratamento} foi concluído",
+      "canais": ["app", "email", "sms"]
+    }
+  ],
+  "ordem_exibicao": 2,
+  "visivel_paciente": true,
+  "data_atualizacao": ISODate("2025-01-15")
+}

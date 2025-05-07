@@ -1,0 +1,29 @@
+{
+  "_id": ObjectId("5f8a9b1d2c3e4f5a6b7c8d3a"),
+  "titulo": "Lembrete de Manutenção",
+  "mensagem": "Lembre-se da sua manutenção mensal do aparelho ortodôntico",
+  "tipo": "lembrete_consulta",
+  "data_criacao": ISODate("2025-10-10T10:00:00Z"),
+  "data_envio": ISODate("2025-10-14T08:00:00Z"),
+  "data_leitura": ISODate("2025-10-14T09:15:00Z"),
+  "id_usuario": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9e"),
+  "id_agendamento": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9h"),
+  "id_tratamento": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9g"),
+  "status": {
+    "codigo": 2,
+    "descricao": "Lida"
+  },
+  "canal_envio": ["app", "email"],
+  "acoes_disponiveis": [
+    {
+      "tipo": "confirmar",
+      "texto": "Confirmar presença",
+      "url": "/api/agendamento/confirmar/5f8a9b1d2c3e4f5a6b7c8d9h"
+    },
+    {
+      "tipo": "remarcar",
+      "texto": "Remarcar consulta",
+      "url": "/api/agendamento/remarcar/5f8a9b1d2c3e4f5a6b7c8d9h"
+    }
+  ]
+}

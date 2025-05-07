@@ -1,0 +1,53 @@
+{
+  "_id": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9k"),
+  "nome": "Camila Santos",
+  "cro": "CRO-SP 65432",
+  "senha": "456775895",
+  "email": "camila.santos@odontokids.com",
+  "telefone": "(11) 97890-1234",
+  "data_cadastro": ISODate("2024-03-05"),
+  "especialidades": [
+    {
+      "id_especialidade": ObjectId("5f8a9b1d2c3e4f5a6b7c8d1e"),
+      "tipo": "Odontopediatria",
+      "descricao": "Atendimento especializado para crianças"
+    },
+    {
+      "id_especialidade": ObjectId("5f8a9b1d2c3e4f5a6b7c8d1f"),
+      "tipo": "Dentística",
+      "descricao": "Restaurações estéticas e funcionais"
+    }
+  ],
+  "planos_atendidos": [
+    {
+      "id_plano": ObjectId("5f8a9b1d2c3e4f5a6b7c8d2a"),
+      "nome_plano": "OdontoPrev Premium",
+      "data_adesao": ISODate("2024-03-15")
+    },
+    {
+      "id_plano": ObjectId("5f8a9b1d2c3e4f5a6b7c8d2d"),
+      "nome_plano": "Amil Dental",
+      "data_adesao": ISODate("2024-04-10")
+    }
+  ],
+  "horarios_atendimento": {
+    "segunda": ["08:00-12:00", "14:00-17:00"],
+    "terca": ["08:00-12:00", "14:00-17:00"],
+    "quarta": ["08:00-12:00", "14:00-17:00"],
+    "quinta": ["08:00-12:00", "14:00-17:00"],
+    "sexta": ["08:00-12:00"],
+    "sabado": ["09:00-12:00"]
+  },
+  "clinica": {
+    "nome": "Odonto Kids",
+    "endereco": {
+      "logradouro": "Rua Pamplona", 
+      "numero": "1200",
+      "complemento": "Térreo",
+      "bairro": "Jardim Paulista",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "cep": "01405-001"
+    }
+  }
+}

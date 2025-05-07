@@ -1,0 +1,58 @@
+{
+  "_id": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9j"),
+  "nome": "Ricardo Mendes",
+  "cro": "CRO-SP 78945",
+  "senha": "1234567",
+  "email": "ricardo.mendes@dentalsaude.com",
+  "telefone": "(11) 98123-4567",
+  "data_cadastro": ISODate("2023-08-15"),
+  "especialidades": [
+    {
+      "id_especialidade": ObjectId("5f8a9b1d2c3e4f5a6b7c8d1c"),
+      "tipo": "Implantodontia",
+      "descricao": "Especialidade focada em implantes dentários"
+    },
+    {
+      "id_especialidade": ObjectId("5f8a9b1d2c3e4f5a6b7c8d1d"),
+      "tipo": "Cirurgia Oral",
+      "descricao": "Procedimentos cirúrgicos na cavidade oral"
+    }
+  ],
+  "planos_atendidos": [
+    {
+      "id_plano": ObjectId("5f8a9b1d2c3e4f5a6b7c8d2a"),
+      "nome_plano": "OdontoPrev Premium",
+      "data_adesao": ISODate("2023-09-10")
+    },
+    {
+      "id_plano": ObjectId("5f8a9b1d2c3e4f5a6b7c8d2b"),
+      "nome_plano": "OdontoPrev Empresarial",
+      "data_adesao": ISODate("2023-10-15")
+    },
+    {
+      "id_plano": ObjectId("5f8a9b1d2c3e4f5a6b7c8d2c"),
+      "nome_plano": "SulAmérica Odonto",
+      "data_adesao": ISODate("2024-01-20")
+    }
+  ],
+  "horarios_atendimento": {
+    "segunda": ["10:00-14:00", "15:00-20:00"],
+    "terca": ["10:00-14:00", "15:00-20:00"],
+    "quarta": [],
+    "quinta": ["10:00-14:00", "15:00-20:00"],
+    "sexta": ["10:00-14:00", "15:00-20:00"],
+    "sabado": ["09:00-13:00"]
+  },
+  "clinica": {
+    "nome": "Dental Saúde Integrada",
+    "endereco": {
+      "logradouro": "Av. Faria Lima", 
+      "numero": "3400",
+      "complemento": "Conj. 72",
+      "bairro": "Itaim Bibi",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "cep": "04538-132"
+    }
+  }
+}

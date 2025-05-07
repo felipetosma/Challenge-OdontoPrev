@@ -1,0 +1,41 @@
+{
+  "_id": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9i"),
+  "nome": "Mariana Costa",
+  "email": "mariana.costa@email.com",
+  "senha": "$2a$10$hKDVYxLefVHV/vtuPhWD3OigtRyOykRLcIwPiSd3.fShkZXUzveKu",
+  "telefone": "(11) 97654-3210",
+  "nr_carteira": "0987654321",
+  "data_nascimento": ISODate("1990-05-20"),
+  "ultimo_acesso": ISODate("2025-09-30T09:45:00Z"),
+  "endereco": {
+    "logradouro": "Rua Oscar Freire",
+    "numero": "500",
+    "bairro": "Jardins",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "cep": "01426-000"
+  },
+  "checklist": {
+    "nivel": 2,
+    "escovacao_dentes": 2,
+    "fio_dental": 2,
+    "enxaguante_bucal": 1,
+    "ultima_atualizacao": ISODate("2025-10-02T08:00:00Z"),
+    "historico": [
+      {
+        "data": ISODate("2025-09-15T10:15:00Z"),
+        "nivel": 1,
+        "escovacao_dentes": 1,
+        "fio_dental": 1,
+        "enxaguante_bucal": 0
+      },
+      {
+        "data": ISODate("2025-09-25T10:15:00Z"),
+        "nivel": 2,
+        "escovacao_dentes": 2,
+        "fio_dental": 2,
+        "enxaguante_bucal": 1
+      }
+    ]
+  }
+}
