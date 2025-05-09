@@ -1,46 +1,12 @@
 {
-  "_id": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9f"),
   "nome": "Ana Oliveira",
   "cro": "CRO-SP 54321",
-  "senha": "987654321",
+  "senha": "$2a$10$pQzL5Ej2KmV9XbR7zLcN8uWjFB3jTsPd6UJrGTMNqtkNPJ2Mfv4eG",
   "email": "ana.oliveira@clinica.com",
   "telefone": "(11) 99876-5432",
   "data_cadastro": ISODate("2024-01-10"),
-  "especialidades": [
-    {
-      "id_especialidade": ObjectId("5f8a9b1d2c3e4f5a6b7c8d1a"),
-      "tipo": "Ortodontia",
-      "descricao": "Tratamento de correção dentária"
-    },
-    {
-      "id_especialidade": ObjectId("5f8a9b1d2c3e4f5a6b7c8d1b"),
-      "tipo": "Endodontia",
-      "descricao": "Tratamento de canal"
-    }
-  ],
-  "planos_atendidos": [
-    {
-      "id_plano": ObjectId("5f8a9b1d2c3e4f5a6b7c8d2a"),
-      "nome_plano": "OdontoPrev Premium",
-      "data_adesao": ISODate("2024-02-05")
-    }
-  ],
-  "horarios_atendimento": {
-    "segunda": ["08:00-12:00", "14:00-18:00"],
-    "terca": ["08:00-12:00", "14:00-18:00"],
-    "quarta": ["08:00-12:00"],
-    "quinta": ["08:00-12:00", "14:00-18:00"],
-    "sexta": ["08:00-12:00", "14:00-18:00"]
-  },
-  "clinica": {
-    "nome": "Clínica Sorrir Mais",
-    "endereco": {
-      "logradouro": "Rua Augusta", 
-      "numero": "500",
-      "bairro": "Consolação",
-      "cidade": "São Paulo",
-      "estado": "SP",
-      "cep": "01305-000"
-    }
-  }
+  "especialidade": "Ortodontia",
+  "dias_atendimento": ["segunda", "quarta", "sexta"],
+  "horario_inicio": "08:00",
+  "horario_fim": "18:00"
 }

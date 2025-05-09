@@ -1,23 +1,11 @@
 {
-  "_id": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9g"),
   "tipo_tratamento": "Ortodôntico",
   "descricao": "Instalação e manutenção de aparelho fixo",
   "data_inicio": ISODate("2025-06-15"),
   "data_termino_prevista": ISODate("2026-12-15"),
   "data_termino_efetiva": null,
   "id_usuario": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9e"),
-  "usuario_nome": "Carlos Silva",
   "id_dentista": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9f"),
-  "dentista_nome": "Dra. Ana Oliveira",
-  "status": {
-    "codigo": 1,
-    "descricao": "Em andamento"
-  },
-  "plano": {
-    "id_plano": ObjectId("5f8a9b1d2c3e4f5a6b7c8d2a"),
-    "nome": "OdontoPrev Premium",
-    "cobertura": "Total"
-  },
   "procedimentos": [
     {
       "data": ISODate("2025-06-15"),
@@ -30,14 +18,14 @@
       "observacoes": "Ajuste da tensão dos elásticos"
     }
   ],
-  "notificacoes": [
-    {
-      "id_notificacao": ObjectId("5f8a9b1d2c3e4f5a6b7c8d3a"),
-      "mensagem": "Lembre-se da sua manutenção mensal do aparelho",
-      "data_envio": ISODate("2025-08-10T08:00:00Z"),
-      "lida": true
-    }
-  ],
   "custo_total": 3500.00,
-  "forma_pagamento": "Parcelado (10x)"
+  "forma_pagamento": {
+    "metodo": "Parcelado",
+    "parcelas": 10,
+    "valor_parcela": 350.00,
+    "status_pagamento": [
+      { "parcela": 1, "status": "pago", "data": ISODate("2025-06-15") },
+      { "parcela": 2, "status": "pago", "data": ISODate("2025-07-15") }
+    ]
+  }
 }

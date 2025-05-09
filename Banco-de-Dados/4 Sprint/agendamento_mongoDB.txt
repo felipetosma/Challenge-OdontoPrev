@@ -1,5 +1,4 @@
 {
-  "_id": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9h"),
   "data_agendada": ISODate("2025-10-15T10:30:00Z"),
   "duracao_minutos": 45,
   "id_tratamento": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9g"),
@@ -7,25 +6,7 @@
   "id_usuario": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9e"),
   "usuario_nome": "Carlos Silva",
   "telefone_usuario": "(11) 98765-4321",
-  "id_dentista": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9f"),
-  "dentista_nome": "Dra. Ana Oliveira",
-  "status": {
-    "codigo": 1,
-    "descricao": "Confirmado"
-  },
-  "clinica": {
-    "nome": "Clínica Sorrir Mais",
-    "endereco": {
-      "logradouro": "Rua Augusta", 
-      "numero": "500",
-      "bairro": "Consolação",
-      "cidade": "São Paulo",
-      "estado": "SP",
-      "cep": "01305-000"
-    }
-  },
-  "notificacao_enviada": true,
-  "notificacao_data": ISODate("2025-10-14T08:00:00Z"),
-  "observacoes": "Manutenção mensal do aparelho fixo",
-  "historico_remarcacoes": []
+  "status": "confirmado",
+  "sala": "Consultório 3",
+  "observacoes": "Paciente solicitou primeiro horário da manhã"
 }

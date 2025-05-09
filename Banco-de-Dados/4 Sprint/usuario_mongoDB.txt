@@ -1,8 +1,7 @@
 {
-  "_id": ObjectId("5f8a9b1d2c3e4f5a6b7c8d9e"),
   "nome": "Carlos Matos",
   "email": "carlos.matos@email.com",
-  "senha": "$2a$10$hKDVYxLefVHV/vtuPhWD3OigtRyOykRLcIwPiSd3.fShkZXUzveKu",
+  "senha": "123124145",
   "telefone": "(11) 98765-4321",
   "nr_carteira": "1234567890",
   "data_nascimento": ISODate("1985-03-15"),
@@ -16,20 +15,15 @@
     "estado": "SP",
     "cep": "01310-100"
   },
-  "checklist": {
-    "nivel": 3,
-    "escovacao_dentes": 3,
-    "fio_dental": 2,
-    "enxaguante_bucal": 1,
-    "ultima_atualizacao": ISODate("2025-10-01T10:15:00Z"),
-    "historico": [
-      {
-        "data": ISODate("2025-09-28T10:15:00Z"),
-        "nivel": 2,
-        "escovacao_dentes": 2,
-        "fio_dental": 1,
-        "enxaguante_bucal": 1
-      }
-    ]
+  "historico_medico": {
+    "alergias": ["penicilina", "látex"],
+    "doencas_cronicas": ["hipertensão"],
+    "medicamentos": ["losartana 50mg"]
+  },
+  "convenio": {
+    "nome": "OdontoPrev",
+    "numero": "87654321",
+    "plano": "Premium",
+    "validade": ISODate("2026-12-31")
   }
 }
