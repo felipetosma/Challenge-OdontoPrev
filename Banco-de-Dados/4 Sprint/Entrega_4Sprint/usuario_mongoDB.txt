@@ -1,0 +1,89 @@
+db.usuarios.insertMany([
+  {
+    "nome": "Carlos Matos",
+    "email": "carlos.matos@email.com",
+    "senha": "123124145",
+    "telefone": "(11) 98765-4321",
+    "nr_carteira": "1234567890",
+    "data_nascimento": ISODate("1985-03-15"),
+    "ultimo_acesso": ISODate("2025-09-15T14:30:00Z"),
+    "endereco": {
+      "logradouro": "Av. Paulista",
+      "numero": "1000",
+      "complemento": "Apto 123",
+      "bairro": "Bela Vista",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "cep": "01310-100"
+    },
+    "historico_medico": {
+      "alergias": ["penicilina", "látex"],
+      "doencas_cronicas": ["hipertensão"],
+      "medicamentos": ["losartana 50mg"]
+    },
+    "convenio": {
+      "nome": "OdontoPrev",
+      "numero": "87654321",
+      "plano": "Premium",
+      "validade": ISODate("2026-12-31")
+    }
+  },
+  {
+    "nome": "Mariana Costa",
+    "email": "mariana.costa@email.com",
+    "senha": "mariana123",
+    "telefone": "(11) 97654-3210",
+    "nr_carteira": "9876543210",
+    "data_nascimento": ISODate("1990-07-22"),
+    "ultimo_acesso": ISODate("2025-10-10T09:45:00Z"),
+    "endereco": {
+      "logradouro": "Rua Augusta",
+      "numero": "500",
+      "complemento": "Bloco B, Apto 45",
+      "bairro": "Consolação",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "cep": "01304-000"
+    },
+    "historico_medico": {
+      "alergias": ["amoxicilina"],
+      "doencas_cronicas": [],
+      "medicamentos": ["anticoncepcional"]
+    },
+    "convenio": {
+      "nome": "Amil Dental",
+      "numero": "12345678",
+      "plano": "Básico",
+      "validade": ISODate("2027-05-31")
+    }
+  },
+  {
+    "nome": "Roberto Almeida",
+    "email": "roberto.almeida@email.com",
+    "senha": "roberto456",
+    "telefone": "(11) 91234-5678",
+    "nr_carteira": "5678901234",
+    "data_nascimento": ISODate("1972-11-05"),
+    "ultimo_acesso": ISODate("2025-10-12T16:20:00Z"),
+    "endereco": {
+      "logradouro": "Rua Oscar Freire",
+      "numero": "1500",
+      "complemento": "Casa",
+      "bairro": "Jardins",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "cep": "01426-001"
+    },
+    "historico_medico": {
+      "alergias": [],
+      "doencas_cronicas": ["diabetes tipo 2", "colesterol alto"],
+      "medicamentos": ["metformina 850mg", "sinvastatina 20mg"]
+    },
+    "convenio": {
+      "nome": "SulAmérica Odonto",
+      "numero": "34567890",
+      "plano": "Executivo",
+      "validade": ISODate("2026-08-15")
+    }
+  }
+])

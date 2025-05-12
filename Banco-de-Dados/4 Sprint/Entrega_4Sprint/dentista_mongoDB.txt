@@ -1,0 +1,38 @@
+db.dentistas.insertMany([
+  {
+    "nome": "Ana Oliveira",
+    "cro": "CRO-SP 54321",
+    "senha": "$2a$10$pQzL5Ej2KmV9XbR7zLcN8uWjFB3jTsPd6UJrGTMNqtkNPJ2Mfv4eG",
+    "email": "ana.oliveira@clinica.com",
+    "telefone": "(11) 99876-5432",
+    "data_cadastro": ISODate("2024-01-10"),
+    "especialidade": "Ortodontia",
+    "dias_atendimento": ["segunda", "quarta", "sexta"],
+    "horario_inicio": "08:00",
+    "horario_fim": "18:00"
+  },
+  {
+    "nome": "Ricardo Santos",
+    "cro": "CRO-SP 67890",
+    "senha": "$2a$10$rTgHj7Lp9qF5bX3zVm8L5eJhG6tW9pKdN8gYtR3LzU5Ui7HvQf2XC",
+    "email": "ricardo.santos@clinica.com",
+    "telefone": "(11) 98765-1234",
+    "data_cadastro": ISODate("2024-02-15"),
+    "especialidade": "Cirurgia Bucomaxilofacial",
+    "dias_atendimento": ["terca", "quinta"],
+    "horario_inicio": "09:00",
+    "horario_fim": "17:00"
+  },
+  {
+    "nome": "Juliana Martins",
+    "cro": "CRO-SP 12345",
+    "senha": "$2a$10$7yDgJfEr2LmN8hG5vP9jOuZnH3QxKfR7tL2pVgT3eWqS8zX3Y5tKW",
+    "email": "juliana.martins@clinica.com",
+    "telefone": "(11) 91234-9876",
+    "data_cadastro": ISODate("2024-03-20"),
+    "especialidade": "Odontopediatria",
+    "dias_atendimento": ["segunda", "terca", "quarta", "quinta", "sexta"],
+    "horario_inicio": "08:30",
+    "horario_fim": "16:30"
+  }
+])

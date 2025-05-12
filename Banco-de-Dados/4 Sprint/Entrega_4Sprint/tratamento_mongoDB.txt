@@ -1,0 +1,105 @@
+db.tratamentos.insertMany([
+  {
+    "tipo_tratamento": "Ortodôntico",
+    "descricao": "Instalação e manutenção de aparelho fixo",
+    "data_inicio": ISODate("2025-06-15"),
+    "data_termino_prevista": ISODate("2026-12-15"),
+    "data_termino_efetiva": null,
+    "procedimentos": [
+      {
+        "data": ISODate("2025-06-15"),
+        "descricao": "Instalação do aparelho fixo",
+        "observacoes": "Instalação ocorreu sem complicações"
+      },
+      {
+        "data": ISODate("2025-07-20"),
+        "descricao": "Primeira manutenção",
+        "observacoes": "Ajuste da tensão dos elásticos"
+      }
+    ],
+    "custo_total": 3500.00,
+    "forma_pagamento": {
+      "metodo": "Parcelado",
+      "parcelas": 10,
+      "valor_parcela": 350.00,
+      "status_pagamento": [
+        { "parcela": 1, "status": "pago", "data": ISODate("2025-06-15") },
+        { "parcela": 2, "status": "pago", "data": ISODate("2025-07-15") }
+      ]
+    }
+  },
+  {
+    "tipo_tratamento": "Endodôntico",
+    "descricao": "Tratamento de canal em molar superior",
+    "data_inicio": ISODate("2025-08-10"),
+    "data_termino_prevista": ISODate("2025-09-30"),
+    "data_termino_efetiva": ISODate("2025-10-05"),
+    "procedimentos": [
+      {
+        "data": ISODate("2025-08-10"),
+        "descricao": "Abertura e medicação",
+        "observacoes": "Paciente apresentou dor intensa"
+      },
+      {
+        "data": ISODate("2025-08-25"),
+        "descricao": "Instrumentação dos canais",
+        "observacoes": "Realizada instrumentação mecânica e química"
+      },
+      {
+        "data": ISODate("2025-09-15"),
+        "descricao": "Obturação dos canais",
+        "observacoes": "Preenchimento com guta-percha"
+      },
+      {
+        "data": ISODate("2025-10-05"),
+        "descricao": "Restauração definitiva",
+        "observacoes": "Finalização com restauração de resina composta"
+      }
+    ],
+    "custo_total": 1800.00,
+    "forma_pagamento": {
+      "metodo": "À vista",
+      "parcelas": 1,
+      "valor_parcela": 1800.00,
+      "status_pagamento": [
+        { "parcela": 1, "status": "pago", "data": ISODate("2025-08-10") }
+      ]
+    }
+  },
+  {
+    "tipo_tratamento": "Implante Dentário",
+    "descricao": "Implante de titânio e coroa de porcelana",
+    "data_inicio": ISODate("2025-07-05"),
+    "data_termino_prevista": ISODate("2025-12-20"),
+    "data_termino_efetiva": null,
+    "procedimentos": [
+      {
+        "data": ISODate("2025-07-05"),
+        "descricao": "Avaliação e planejamento",
+        "observacoes": "Tomografia computadorizada e moldes realizados"
+      },
+      {
+        "data": ISODate("2025-08-15"),
+        "descricao": "Cirurgia de instalação do implante",
+        "observacoes": "Implante de 4.1mm x 11mm instalado com torque de 45N"
+      },
+      {
+        "data": ISODate("2025-11-20"),
+        "descricao": "Reabertura e instalação do cicatrizador",
+        "observacoes": "Cicatrização satisfatória, tecido gengival saudável"
+      }
+    ],
+    "custo_total": 4500.00,
+    "forma_pagamento": {
+      "metodo": "Parcelado",
+      "parcelas": 6,
+      "valor_parcela": 750.00,
+      "status_pagamento": [
+        { "parcela": 1, "status": "pago", "data": ISODate("2025-07-05") },
+        { "parcela": 2, "status": "pago", "data": ISODate("2025-08-05") },
+        { "parcela": 3, "status": "pago", "data": ISODate("2025-09-05") },
+        { "parcela": 4, "status": "pago", "data": ISODate("2025-10-05") }
+      ]
+    }
+  }
+])

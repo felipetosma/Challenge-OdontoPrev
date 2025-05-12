@@ -1,0 +1,32 @@
+db.agendamentos.insertMany([
+  {
+    "data_agendada": ISODate("2025-10-15T10:30:00Z"),
+    "duracao_minutos": 45,
+    "tipo_tratamento": "Ortodôntico",
+    "usuario_nome": "Carlos Matos",
+    "telefone_usuario": "(11) 98765-4321",
+    "status": "confirmado",
+    "sala": "Consultório 3",
+    "observacoes": "Paciente solicitou primeiro horário da manhã"
+  },
+  {
+    "data_agendada": ISODate("2025-10-20T14:00:00Z"),
+    "duracao_minutos": 60,
+    "tipo_tratamento": "Clínico Geral",
+    "usuario_nome": "Mariana Costa",
+    "telefone_usuario": "(11) 97654-3210",
+    "status": "pendente",
+    "sala": "Consultório 1",
+    "observacoes": "Primeira consulta para avaliação geral"
+  },
+  {
+    "data_agendada": ISODate("2025-10-18T09:15:00Z"),
+    "duracao_minutos": 90,
+    "tipo_tratamento": "Cirurgia",
+    "usuario_nome": "Roberto Almeida",
+    "telefone_usuario": "(11) 91234-5678",
+    "status": "confirmado",
+    "sala": "Sala Cirúrgica 2",
+    "observacoes": "Paciente em jejum de 8 horas. Extração de siso."
+  }
+])
